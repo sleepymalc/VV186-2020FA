@@ -1,0 +1,481 @@
+\documentclass[12pt, t]{beamer}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{float} 
+\usepackage{multido}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{indentfirst} 
+\usepackage[style=mla]{biblatex}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{mathtools, nccmath}
+
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\definecolor{Turquoise3}{RGB}{0, 134, 139}
+\renewcommand{\emph}[1]{{\color{Turquoise3}\textsl{#1}}}
+\newcommand{\C}{\mathbb{C}} \newcommand{\F}{\mathbb{F}} \newcommand{\R}{\mathbb{R}} \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\myseries}[2]{$#1_1,#1_2,\dots,#1_#2$}
+\newcommand{\nullspace}{~\\[15pt]}
+\newcommand{\remark}{\textbf{Remark: }}
+\newcommand{\scp}[2]{\langle\,#1\,,\,#2\,\rangle} \newcommand{\scpp}{\langle\,\cdot\,,\,\cdot\,\rangle}
+
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{frametitle}{}{
+\begin{textblock*}{100mm}(0.85\textwidth,-1cm)
+\includegraphics[height=1cm]{Figures/logo/logo.png}
+\end{textblock*}}
+
+\definecolor{themecolor}{RGB}{25,25,112} 
+
+\usecolortheme[named=themecolor]{structure}
+
+\setbeamertemplate{items}[default]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=themecolor,
+    filecolor=themecolor,      
+    urlcolor=themecolor,
+    citecolor=themecolor,
+}
+
+\title{VV186 Mid 1 Big RC}
+\subtitle{\textbf{Sequence II}\\``Find the problem, understand it, then explore more."}
+\institute[UM-SJTU JI]{University of Michigan-Shanghai Jiao Tong University Joint Institute}
+\author{Pingbang Hu}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \includegraphics[height=2cm]{Figures/logo/logo2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Overview}
+    \begin{enumerate}
+        \item Metric Space
+        \item Cauchy Sequence
+        \item Generalization of Convergence
+        \item Completeness
+        \item Construct Real Numbers
+        \item Exercise
+    \end{enumerate}
+\end{frame}
+
+
+\section{Metric Space}
+\begin{frame}
+    \frametitle{Metric Space}
+We want to generalize the idea of \emph{convergence}, and we want to define the most essential thing of convergence by ourselves, 
+namely the \textbf{Length Function}.\\
+
+\vspace{1em}
+
+What properties a usual length function should have?
+\begin{enumerate}
+    \item Always positive.
+    \item Symmetric.
+    \item Followed \emph{Triangle Inequality}.
+\end{enumerate}
+
+\vspace{1em}
+
+Transform these into mathematical language\dots
+\end{frame}
+
+\section{Metric Space}
+\begin{frame}
+    \frametitle{Metric Space}
+A two variables functions 
+
+\begin{equation*}
+    \rho(\cdot,\cdot):M\times M \rightarrow \mathbb{R}
+\end{equation*}
+
+is called a metric if it satisfies:
+
+\begin{enumerate}
+    \item $\forall x,y\in M,\ \rho (x,y) \geq 0$ and $\rho (x,y)=0$ if and only if $x=y$.
+    \item  $\forall x,y\in M,\ \rho (x,y)=\rho (y,x)$.
+    \item  $\forall x,y,z\in M,\ \rho (x,z)\leq \rho (x,y)+\rho (y,z)$.
+\end{enumerate}
+
+
+\end{frame}
+
+\section{Metric Space}
+\begin{frame}
+    \frametitle{Examples}
+\begin{itemize}
+    \item $M=\mathbb{R}^n$, the usual metric is given by 
+        \begin{equation*}
+            \rho ( (x_1,x_2,\dots,x_n), (y_1,y_2,\dots,y_n)) = \sqrt{\sum^{n}_{i=k}(x_i-y_i)^2 }
+        \end{equation*} 
+        and this is so-called \emph{Euclidean distance}.
+    \item $M=\mathbb{N}, \rho(x,y)= \#\{ a:a\in [min\{x,y\},max\{x,y\}]\ \} $
+    \item $M=\mathbb{R},\rho (x,y)=1 $ if $x\neq y$; $\rho (x,y)=0$ if $x=y$
+\end{itemize}
+\vspace{1em}
+Exercise : \\
+\begin{center}
+    Verify the above three functions are actually a metric.
+\end{center}
+\end{frame}
+
+\section{Generalization of Convergence}
+\begin{frame}
+    \frametitle{Generalization of Convergence}
+Then, by replacing the usual matric $\rho(x,y)=|x-y|$ and choosing our universal set $M$, we get the natural definition for
+generalize convergence in metric space $(M,\rho)$ for a sequence $(a_n):\mathbb{N}\rightarrow M$, which is given by:
+\begin{equation*}
+    \lim_{n\rightarrow \infty}a_n=a\quad :\Leftrightarrow \quad \underset{\epsilon>0}{\forall}\ \underset{N\in \mathbb{N}}{\exists}\ \underset{n>\mathbb{N}}{\forall} a_n\in B_\epsilon(a)
+\end{equation*}
+where
+\begin{equation*}
+    B_\epsilon(a)=\{ x\in M:\rho(x,a)<\epsilon\},\quad \epsilon>0,\quad a\in M.
+\end{equation*}
+
+\end{frame}
+
+\section{Cauchy Sequence}
+\begin{frame}
+    \frametitle{Cauchy Sequence}
+\begin{itemize}
+    \item What is the definition of Cauchy Sequence?
+    \item How to understand Cauchy Sequence?
+    \item Why we want to introduce the idea of Cauchy Sequence?
+    \item What new results can we explore from this new idea?
+\end{itemize}
+
+\vspace{1em}
+
+The fundamental reason why we want to introduce Cauchy Sequence is because we want to \emph{further generalize} the idea of 
+convergence.\\
+
+\vspace{1em}
+
+Now, we are not only free to choose the metric we like, additionally, we remove the constraint which requires a sequence to converge to a \emph{specific point}.
+\end{frame}
+
+\section{Cauchy Sequence}
+\begin{frame}
+    \frametitle{Cauchy Sequence}
+
+You should be familiar with the definition of a Cauchy sequence:
+\vspace{1em}
+
+\textbf{Definition.} A sequence $(a_n)$ in a metric space $(M,\rho)$ is called a \emph{Cauchy sequence} if 
+\begin{equation*}
+    \underset{\epsilon>0}{\forall}\underset{N\in\mathbb{N}}{\exists}\underset{m,n>N}{\forall}\rho(a_m,a_n)<\epsilon
+\end{equation*}
+
+One can see that we define a Cauchy sequence without mentioned a \emph{specific point} in our universal set $M$. This is the fundamental reason why Cauchy is important and 
+interesting.
+
+\end{frame}
+
+
+\section{Cauchy Sequence}
+\begin{frame}
+    \frametitle{Cauchy Sequence}
+We list some important results and theorems for Cauchy Sequence.
+\begin{itemize}
+    \item Every convergent sequence is a Cauchy sequence.
+    \item Every Cauchy sequence in a metric space $(M,\rho)$ is bounded.
+    \item Every Cauchy sequence in $\mathbb{R}$ with the usual metric is convergent.
+\end{itemize}
+
+\vspace{1em}
+
+Exercise : \\
+\begin{center}
+    Give the outlines of the proof for these three theorem.
+\end{center}
+
+\end{frame}
+
+
+\section{Completeness}
+\begin{frame}
+    \frametitle{Completeness}
+The problem is, a Cauchy Sequence can simply not "\emph{converge}" to anywhere anymore if we generalize the idea of convergence.\\
+\vspace{0.5em}
+Then, after generalizing the idea of convergence, if \textbf{every} Cauchy sequence still converge, we say this metric space is 
+\emph{complete}.\\
+\vspace{0.5em}
+We now take a look at some examples for a Cauchy sequence failed to converge.
+
+\end{frame}
+
+\section{Completeness}
+\begin{frame}
+    \frametitle{Completeness}
+Examples:
+\begin{enumerate}
+    \item The space $([0,1),\rho)$, where $\rho(x,y)=|x-y|$.
+    \item The space $(\mathbb{Q},\rho)$, where $\rho(x,y)=|x-y|$.
+\end{enumerate}
+\vspace{1em}
+We take a close look for the second example.\\
+
+For a metric space $(\mathbb{Q},\rho)$ given by example 2, consider a sequence given by
+\begin{equation*}
+    (a_n)_{n\in\mathbb{N}}:=(1,\ 1.4,\ 1.41,\ 1.414,\ \dots)
+\end{equation*}
+is a Cauchy sequence but \emph{failed to converge in $\mathbb{Q}$} if we choose the following terms appropriately and let $(a_n)$ \emph{converges 
+to $\sqrt{2}$ in $\mathbb{R}$} eventually. Clearly, $(a_n)$ is not a convergent sequence in $(\mathbb{Q},\rho)$.
+\vspace{0,5em}
+
+From here, it seems we somehow find a good way to \emph{construct} Real Numbers.
+\end{frame}
+
+\section{Construct Real Numbers}
+\begin{frame}
+    \frametitle{Construct Real Numbers}
+The main idea to \textbf{complete} $\mathbb{Q}$ is to consider the following\\
+\begin{center}
+    Every Cauchy sequence can \emph{represent} a number in $\mathbb{R}$.
+\end{center}
+
+For example, from the last slide, we can view the sequence 
+\begin{equation*}
+    (a_n)_{n\in\mathbb{N}}=(1,\ 1.4,\ 1.41,\ 1.414,\ \dots)
+\end{equation*}
+as $\sqrt{2}$ by defining a \emph{(equivalence) class} for each number in $\mathbb{R}$, and in this case, we define the sequence $(a_n)$ as $\sqrt{2}$.\\
+\vspace{0.5em}
+Then, from now on, the number defined through the Cauchy sequence which is given by
+\begin{equation*}
+    0.9,0.99,0.999,0.9999,0.99999
+\end{equation*}
+is equal to $1$, namely $0.999999_{\dots}=1$.
+\end{frame}
+
+\section{More about Cauchy sequence}
+\begin{frame}
+    \frametitle{More about Cauchy Sequence}
+
+Since we do not make any constraint to our universal set because we are using simple set theory in default, we can collect any element in our universal set and define a 
+\textbf{reasonable} metric to form a metric space.\\
+\vspace{1em}
+Consider follows:\\
+\hspace{1em} Define the universal set as 
+\begin{equation*}
+    S:=\{a_n:a_n\text{ is a sequence.}\}
+\end{equation*}
+Then, we can define a subset of $S$ as
+\begin{equation*}
+    M:=\{a^{(k)}\in S:a^{(k)}=(1,\frac{1}{2},\frac{1}{3},\dots,\frac{1}{k},0,0,0,\dots)  \}
+\end{equation*}
+clearly, $M\subset S$. 
+
+\end{frame}
+
+\section{More about Cauchy sequence}
+\begin{frame}
+    \frametitle{More about Cauchy Sequence}
+Then, we want to construct a metric space with the universal set $M$, which means we should construct a reasonable metric to measure the distance \emph{between two sequence}.\\
+Consider follows:\\
+\hspace{1em} Define $\rho(\ a^{(n)},\ a^{(m)}\ )$ as
+\begin{equation*}
+    \rho(\ a^{(n)},\ a^{(m)}\ )=\sup_{k\in \mathbb{N}}|(a^{(n)}-a^{(m)})_k|
+\end{equation*}
+For example, 
+\begin{equation*}
+    a^{(3)}=(1,\frac{1}{2},\frac{1}{3},0,0,0,\dots)
+\end{equation*}
+Then we will have 
+\begin{equation*}
+    a^{(3)}_1=1,\qquad a^{(3)}_2=\frac{1}{2},\qquad a^{(3)}_3=\frac{1}{3},\qquad a^{(3)}_4=0, \dots
+\end{equation*}
+
+
+
+\end{frame}
+
+\section{More about Cauchy sequence}
+\begin{frame}
+    \frametitle{More about Cauchy Sequence}
+Furthermore, we define the subtraction between two sequence as \emph{term by term} subtraction. \\
+Without losing the generality, we suppose $m>n$, then we have
+\begin{equation*}
+    \begin{split}
+        \rho(a^{(n)},a^{(m)})&=sup_{k\in \mathbb{N}^*}|(a^{(n)}-a^{(m)})_k|\\
+                             &=\sup_{k\in \mathbb{N}^*}|(0,\dots,0,\frac{1}{n+1},\dots,\frac{1}{m},\dots)_k|\\
+                             &=\frac{1}{n+1}
+    \end{split}
+    \
+\end{equation*}
+Clearly, as $n,m$ getting bigger and bigger, $\rho(a^{(n)},a^{(m)})\rightarrow0$.\\
+Now, let us consider the sequence defined as 
+\begin{equation*}
+    (A_n)_{n\in\mathbb{N}^*}:=(a^{(1)},a^{(2)},a^{(3)},a^{(4)},\dots)
+\end{equation*}
+\end{frame}
+
+\section{More about Cauchy sequence}
+\begin{frame}
+    \frametitle{More about Cauchy Sequence}
+Obviously, $(A_n)$ is a Cauchy sequence since if $n,m$ is big enough, $\rho(a^{(n)},a^{(m)})$ will be small enough as shown in the last slide.\\
+\vspace{1em}
+But let us take a step back to look at what $A_n$ actually is. We list some terms for $A_n$ below.
+\begin{equation*}
+    \begin{split}
+        A_1=a^{(1)}&=(1,0,0,0,\dots)\\
+        A_2=a^{(2)}&=(1,\frac{1}{2},0,0,\dots)\\
+        A_3=a^{(3)}&=(1,\frac{1}{2},\frac{1}{3},0,\dots)
+    \end{split}
+\end{equation*}
+The limit of this sequence clearly is 
+\begin{equation*}
+    A:=(1,\frac{1}{2},\frac{1}{3},\dots,\frac{1}{n},\dots)
+\end{equation*}
+
+
+\end{frame}
+
+\section{More about Cauchy sequence}
+\begin{frame}
+    \frametitle{More about Cauchy Sequence}
+Now, we see $A_n$'s limit is $A$ and $A_n$ is a Cauchy sequence in our metric space $(M,\rho)$. But the question is: 
+\begin{equation*}
+    \text{Does } A\in M \text{?}
+\end{equation*}
+
+The answer is simply \textbf{no}.\\
+\vspace{1em} Since in our set $M$, all elements (sequences) will have infinity many zeros in their last terms (tail).\\
+
+\vspace{1em} But $A$ has no zeros appeared in any entry of it, so clearly $A\notin M$, which means $(A_n)$ does \textbf{not} converge in the metric space
+$(M,\rho)$.\\
+
+\vspace{1em} Hence, $(M,\rho)$ can \textbf{not} be complete.
+\end{frame}
+
+\section{More about Cauchy sequence}
+\begin{frame}
+    \frametitle{More about Cauchy Sequence}
+    After digesting all the contents above, I think you really understand the concept of Cauchy sequence, metric space and the idea of 
+\emph{generalizing convergence}.\\
+\vspace{1em}
+
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Practice makes perfect}
+\vspace{7em}
+\begin{center}
+    
+    \Large So now, let us do some exercises.
+\end{center}
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+1. Prove or disprove the following statement:\\
+\hspace{1em} A Cauchy sequence in a metric space may have at most one accumulation point.\\
+(This exercise is directly taken from last year's midterm!)
+\end{frame}
+
+\section{Solution}
+\begin{frame}
+    \frametitle{Solution}
+Since I would like to give you guy some taste for how you do a complete proof in an actual exam, so here is the solution.\\
+\vspace{2em}
+$Solution.$\hspace{1em} The statement is true. Suppose that a Cauchy sequence $(x_n)$ is given in a metric space $(M,\rho)$ and that 
+$x$ and $y$ are two accumulation points in $M$.(\textbf{1 Mark}) Choose $\epsilon>0$. Then there exists some $N\in\mathbb{N}$ such that 
+$\rho(x_n,x_m)<\frac{\epsilon}{4}$ for all $n,m>N$.(\textbf{1 Mark}) Furthermore, there exist $n_0,m_0>N$ such  that $\rho(x.x_{n_0})<\frac{\epsilon}{4}$ and 
+$\rho(y,x_{m_0})<\frac{\epsilon}{4}$.(\textbf{1 Mark}) Hence,
+\begin{equation*}
+    \begin{split}
+        \rho(x,y)&\leq\rho(x,x_{n_0})+\rho(x_{n_0},y)\\
+        &\leq\rho(x,x_{n_0})+\rho(x_{n_0},x_{m_0})+\rho(x_{m_0},x_{n_0})+\rho(x_{m_0},y)\\
+        &<\epsilon
+    \end{split}
+\end{equation*}
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+2. Please construct a metric that makes $\mathbb{R}$ incomplete with regard to this metric. You can use the method given in 
+Horst's slides or one in mine.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise}
+3. A sequence is defined as
+\begin{equation*}
+    (S_n)_{n\in\mathbb{N}}, S_1=\sqrt{2}, S_2=\sqrt{2\sqrt{2}}, S_3=\sqrt{2\sqrt{2\sqrt{2}}}
+\end{equation*}
+Please calculate the limit of $(S_n)$ as $n\rightarrow \infty$, if it exists.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise}
+4. Prove that $\lim \sqrt[n]{n}=1$.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise}
+5. Let $(x_n)$ be a bounded real sequence. Then define
+\begin{equation*}
+     a_n:=\sup_{m\geq n}(x_m),\quad b_n:=\inf_{m\geq n}(x_m) 
+\end{equation*}
+
+\begin{enumerate}
+    \item Prove that $(a_n)$ is decreasing, while $(b_n)$ is increasing.
+    \item Since both $(a_n),(b_n)$ are monotonic and bounded, they are convergent. 
+        We denote $\underline{\lim} x_n=\lim b_n$; $\overline{\lim}x_n=\lim a_n$. Show that:
+        \begin{equation*}
+            \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
+        \end{equation*}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Exercise}
+6. Let $(a_n)$ be a sequence such that 
+\begin{equation*}
+    a_n=\frac{1}{\sqrt{n^2+1}}+\dots+\frac{1}{\sqrt{n^2+n}}
+\end{equation*}
+Calculate the limit of $(a_n)$.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution}
+
+Since all the exercise is taken from my RC-II slides, and I have made all the solutions for them, you can refer to the solution of RC-II in canvas.\\
+\vspace{1em}
+Some of them are quite easy, and some of them aren't. Just take them easy. If you can't figure some exercises out in the first time, that's \emph{totally normal}.\\
+\vspace{1em}
+Just think about the structure of the solution, and then take a look of the solution to get some ideas.\\
+\vspace{1.5em}
+\begin{center}
+    Hope you all get a good grades!
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{End}
+    \vspace{2cm}
+    \Huge \center  Have Fun and Learn Well!
+\end{frame}
+
+\end{document}

@@ -1,0 +1,474 @@
+\documentclass[12pt, t]{beamer}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{float} 
+\usepackage{multido}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{indentfirst} 
+\usepackage[style=mla]{biblatex}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{mathtools, nccmath}
+
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\definecolor{Turquoise3}{RGB}{0, 134, 139}
+\renewcommand{\emph}[1]{{\color{Turquoise3}\textsl{#1}}}
+\newcommand{\C}{\mathbb{C}} \newcommand{\F}{\mathbb{F}} \newcommand{\R}{\mathbb{R}} \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\myseries}[2]{$#1_1,#1_2,\dots,#1_#2$}
+\newcommand{\nullspace}{~\\[15pt]}
+\newcommand{\remark}{\textbf{Remark: }}
+\newcommand{\scp}[2]{\langle\,#1\,,\,#2\,\rangle} \newcommand{\scpp}{\langle\,\cdot\,,\,\cdot\,\rangle}
+
+
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{frametitle}{}{
+\begin{textblock*}{100mm}(0.85\textwidth,-1cm)
+\includegraphics[height=1cm]{Figures/logo/logo.png}
+\end{textblock*}}
+
+\definecolor{themecolor}{RGB}{25,25,112} 
+
+\usecolortheme[named=themecolor]{structure}
+
+\setbeamertemplate{items}[default]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=themecolor,
+    filecolor=themecolor,      
+    urlcolor=themecolor,
+    citecolor=themecolor,
+}
+
+\title{VV186 RC Part IV}
+\subtitle{\textbf{Differentiation}\\``Take everything Rigorously."}
+\institute[UM-SJTU JI]{University of Michigan-Shanghai Jiao Tong University Joint Institute}
+\author{Pingbang Hu}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \includegraphics[height=2cm]{Figures/logo/logo2.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Overview}
+    \begin{enumerate}
+        \item Differentiation -- An Introduction
+        \item Derivative
+        \item Rules of Differentiation
+        \item Application of Differentiation
+        \item Exercise
+    \end{enumerate}
+\end{frame}
+
+\section{Differentiation -- An Introduction}
+\begin{frame}
+    \frametitle{Differentiation -- An Introduction}
+
+In order to investigate a function's derivative, we should first take a close look of \textbf{Linear map}.
+
+\vspace{2em}
+\textbf{Definition : } A linear map on $\mathbb{R}$ is a function given by :
+\begin{equation*}
+    L: \mathbb{R}\rightarrow\mathbb{R}, \qquad L(x)=\alpha x, \alpha \in \mathbb{R}
+\end{equation*}
+
+\vspace{1em}
+Clearly, such a function has lots of good properties, which made our discussion becomes easier.\\
+\vspace{1em}
+In this perspective, we would like to \emph{approximate} any functions which we are interested in by a linear map. And if 
+such linear map exists, we say this function is \emph{differentiable}.
+\end{frame}
+
+\section{Differentiation -- An Introduction}
+\begin{frame}
+    \frametitle{Differentiation -- An Introduction}
+Here comes the formal definition of differentiability.\\
+\vspace{2em}
+\textbf{Definition : } 
+    Let $\Omega\subseteq\mathbb{R}$ be a set and $x\in \text{int}\Omega$. Moreover, Let $f:\Omega\rightarrow \mathbb{R}$ be a real function. 
+    Then we say $f$ is \textbf{differentiable} if there exists a linear map $L_x$ such that for all sufficiently small $h\in\mathbb{R}$, 
+\begin{equation*}
+    f(x+h)=f(x)+L_x(h)+o(h)\quad as\ h\rightarrow 0
+\end{equation*}
+This linear map is \textbf{unique}, if it exists. \\
+\vspace{1em}
+We call $L_x$ "the derivative of $f$ at $x$". If $f$ is differentiable at all points of some open 
+set $U\subseteq \Omega$, we say $f$ is differentiable on $U$. 
+
+\end{frame}
+
+\section{Derivative}
+\begin{frame}
+    \frametitle{Derivative}
+Common misunderstandings:\\
+\vspace{0.5em}
+    \begin{center}
+        $L_x$ is a number for a fixed $x\in \Omega$, because $L_x=\alpha$.
+    \end{center}
+\vspace{0.5em}
+\hspace{1em}
+$L_x$ is \textbf{not a number}, but a \textbf{linear map}, or one can say "linear function", so it essentially is a \emph{function}.
+$L_x\cdot h=\alpha\cdot h$ (for some $\alpha$) doesn't mean $L_x=\alpha$.\\
+\hspace{1em} To see this, one can consider a function given by 
+\begin{equation*}
+    f(x)=2x
+\end{equation*}
+,which doesn't mean $f=2$.\\
+
+In fact, the notation $(L_x=\alpha)$ sometimes doesn't make sense, as you will see in the future,
+one can assign $L_x$ by a more complicated linear function, then, such a multiplication will not make sense at all.
+
+\end{frame}
+
+\section{Derivative}
+\begin{frame}
+    \frametitle{Derivative}
+Common misunderstandings:\\
+\vspace{0.5em}
+    \begin{center}
+        The derivative of $f$ at $x$ is a line passing through $(x,f(x))$
+    \end{center}
+\vspace{0.5em}
+
+\hspace{1em} Although it is usually a good idea to sketch something to help you to understand some mathematical concepts, but you always need to 
+aware of the essential reason why such a graph make sense.\\
+\vspace{1em}
+\hspace{1em} The derivative of $f$ at $x$ is a \emph{function}, not a graph. We simply use the graph to illustrate our function sometimes, in 
+this case($\mathbb{R}$), it will be a straight line, but in other case, it can be more complicated.
+
+
+\hspace{1em} 
+
+\end{frame}
+
+\section{Derivative}
+\begin{frame}
+    \frametitle{Derivative}
+
+    Common misunderstandings:\\
+\vspace{0.5em}
+    \begin{center}
+        For $f(x)=x^4$, $f'(x)=4x^3$, so $L_x$ may not be linear
+    \end{center}
+\vspace{0.5em}
+
+\hspace{1em} You are confusing "derivative at a point" with "function that gives derivative".
+At certain point $x$, $4x^3$ is just a number in $\mathbb{R}$. Using our notation for $L_x$(or $f'(x))$, we 
+can express $L_x$ as 
+
+\begin{equation*}
+    L_x(\cdot)=4x^3(\cdot)
+\end{equation*}
+, the \emph{variable} of $L_x$ is not $x$, so $L_x$ is \textbf{linear} for its input $(\cdot)$\\
+\vspace{1em}
+Given a differentiable function $f:\Omega\rightarrow\mathbb{R}$, the function 
+that gives a derivative can be denoted by $L:\Omega\rightarrow\mathbb{R},\ L(x)=L_x(\cdot)$.\\
+\textbf{It is a function that maps function to function}.
+
+    
+\end{frame}
+
+\section{Derivative}
+\begin{frame}
+    \frametitle{Derivative}
+Common misunderstandings:\\
+\vspace{0.5em}
+    \begin{center}
+        It doesn't make much sense to define differentiation on an open set.
+    \end{center}
+\vspace{0.5em}
+
+The reason, or benefit to define differentiation on an open set $U$ is because for any point $p\in U$, 
+there is some interval(\emph{neighborhood}) $(p-\epsilon,p+\epsilon)\subseteq U$. This ensures that 
+we can define differentiation at this point $p$, so does \emph{every point} in $U$.\\
+\vspace{1em}
+However, if a set is not open, it may contain some boundary points. On these points our definition for 
+differentiability fails. In fact, one may have to use one-sided differentiation to define it.
+
+\end{frame}
+
+\section{Rules of Differentiation}
+\begin{frame}
+    \frametitle{Rules of Differentiation}
+We not assume both $f$ and $g$ are differentiable functions, then:
+\begin{itemize}
+    \item $(f+g)'(x)=f'(x)+g'(x)$
+    \vspace{1em}
+    \item $(f\cdot g)'(x)=f'(x)g(x)+f(x)g'(x)$
+    \vspace{1em}
+    \item $(f\circ g)'(x)=f'(g(x))g'(x)$
+    \vspace{1em}
+    \item $(\frac{f}{g})'(x)=\frac{f'(xg(x)-f(x)g'(x))}{g^2(x)}$
+    \vspace{1em}
+    \item $f^{-1'}(y)=\frac{1}{f'(f^{-1}(y))}$
+    \vspace{1em}
+    \item $\underset{x\searrow b}{\lim}\frac{f(x)}{g(x)}=\underset{x\searrow b}{\lim}\frac{f'(x)}{g'(x)}$
+    , if $\underset{x\searrow b}{\lim}\frac{f(x)}{g(x)}=\frac{0}{0}\text{ or }\frac{\infty}{\infty}$ and $\underset{x\searrow b}{\lim}\frac{f'(x)}{g'(x)}$ exists.
+\end{itemize}
+\end{frame}
+
+\section{Application of Differentiation}
+\begin{frame}
+    \frametitle{Application of Differentiation}
+We list some useful Results and Theorems.
+\begin{enumerate}
+    \item If a real function is differentiable at $x$, then it is continuous at $x$.
+    \vspace{0.5em}
+    \item \emph{Hierarchy} of local smoothness.
+    \begin{itemize}
+        \item Arbitrary function
+        \item Function continuous at $x$
+        \item Function differentiable at $x$
+        \item Function continuously differentiable at $x$
+        \item Function twice differentiable at $x$
+        \item \dots
+    \end{itemize}
+\end{enumerate}
+
+
+\end{frame}
+
+\section{Application of Differentiation}
+\begin{frame}
+    \frametitle{Application of Differentiation}
+Result and Theorems.\\
+\begin{enumerate}
+    \item[3.] Let $f$ be a function and $(a,b)\subseteq \text{dom}\  f$ and open interval. If $x\in(a,b)$ is a 
+        maximum(or minimum) point of $f\subseteq(a,b)$ and if $f$ is differentiable at $x$, then $f'(x)=0$.
+    \vspace{0.5em}
+    \item[4.] Let $f$ be a function and $[a,b]\subseteq \text{dom}\  f$. Assume that $f$ is differentiable on $(a,b)$ and 
+        $f(a)=f(b)$. Then there is a number $x\in(a,b)$ such that $f'(x)=0$.\\
+        \vspace{0.3em}
+        Comment. We need the requirement that $f$ is \textbf{differentiable everywhere} on $(a,b)$. Otherwise, a 
+        counterexample can be:
+        \begin{equation*}
+            [a,b]=[0,2],\quad 
+            \begin{cases}
+                f(x)=x\qquad &x\in[0,1]\\
+                f(x)=2-x\quad &x\in(1,2]
+            \end{cases}
+        \end{equation*}
+        
+\end{enumerate}
+
+
+\end{frame}
+
+\section{Application of Differentiation}
+\begin{frame}
+    \frametitle{Application of Differentiation}
+Result and Theorems.\\
+\begin{enumerate}
+    \item[5.] Let $[a,b]\subseteq\text{dom}\ f$ be a function that is continuous on $[a,b]$ and differentiable on $(a,b)$.
+        Then there exists a number $x\in(a,b)$ such that $f'(x)=\frac{f(b)-f(a)}{b-a}$.
+    \vspace{0.5em}
+    \item[6.] Let $f$ be a real function and $x\in \text{dom}\ f$ such that $f'(x)=0$. If $f''(x)>0$, then $f$ has a local minimum at $x$, 
+        if $f''(x)<0$, then $f$ has a local maximum at $x$.\\
+    \vspace{0.3em}
+    Comment. The case in which $f''(x)=0$ is more complicated, different conditions may occur.\\
+    \hspace{1em}Example 1: $f'(x)=x^2$.    
+    \hspace{1em}Example 2: $f'(x)=x^3$.\\
+    As you can see from example 2, $f$ may not even have a local extremum if $f''(x)=0$.
+
+\end{enumerate}
+
+
+\end{frame}
+
+\section{Application of Differentiation}
+\begin{frame}
+    \frametitle{Application of Differentiation}
+Result and Theorems.\\
+\begin{enumerate}
+    \item[7.] Let $f$ be a twice differentiable function on an open set $\Omega\subseteq \mathbb{R}$. 
+        If $f$ has a local minimum at some point $a\in \Omega$, then $f''(a)\geq 0$ .
+\end{enumerate}
+\textbf{Proof : }\\
+\hspace{1em} Suppose $f$ has a local minimum at $a$. If $f''(a)<0$, then $f$ would also have a local maximum at $a$. 
+Thus, $f$ would be constant in some interval containing $a$. So $f''(a)=0$. But this contradicts to our assumption.\\
+\vspace{2em}
+Comment. An analogous statement is : If $f$ has a local maximum at some point $a\in\Omega$, then $f''(a)\leq 0$.
+
+\end{frame}
+
+\section{Application of Differentiation}
+\begin{frame}
+    \frametitle{Application of Differentiation}
+Result and Theorems.\\
+\begin{enumerate}
+    \item[8.] Let $a\in(0,\infty)\cup\{\infty\}$. Let $f:(-a,a)\rightarrow\mathbb{R}$ be a differentiable function. 
+        If $f$ is odd, then its derivative is even; if $f$ is even, then its derivative is odd. 
+\end{enumerate}
+
+\textbf{Proof :}\\
+\hspace{1em} Suppose $f$ is odd. Then
+\begin{equation*}
+    f'(-x)=\underset{h\rightarrow 0}{\lim}\frac{f(-x+h)-f(-x)}{h}=\underset{h\rightarrow 0}{\lim}\frac{f(x)-f(x-h)}{h}=f'(x)
+\end{equation*} 
+(Are there a more elegant way to proof it?)
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+To be honest, to this part, you may need more practice to really get familiar with all calculation tricks and procedure. \\
+\vspace{4em}
+\begin{center}
+    \Large Without further saying, let do some exercise.
+\end{center}
+
+\end{frame}
+
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+1. Please calculate following functions' derivative.\\(Suppose $g'$ always exists and doesn't vanish)
+\begin{enumerate}
+    \item[i.]   $f(x)=g(x\cdot g(a))$
+    \item[ii.]  $f(x)=g(x+g(x))+\frac{1}{g(x)}$ 
+    \item[iii.] $f(x) =g(x)(x-a)$
+    \item[iv.]  What is wrong with the following usage of L'Hopital's Rule?\\
+        \begin{equation*}
+            \underset{x\rightarrow 1}{\lim}\frac{x^3-x-2}{x^2-3x+2}=\underset{x\rightarrow 1}{\lim}\frac{3x^2-1}{2x-3}=\underset{x\rightarrow 1}{\lim}\frac{6x}{2}=3
+        \end{equation*}
+\end{enumerate}
+
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+2. Prove that if 
+\begin{equation*}
+    \frac{a_0}{1}+\frac{a_1}{2}+\dots+\frac{a_n}{n+1}=0
+\end{equation*}
+Then $a_0+a_1x+\dots+a_nx^n=0$ for some $x\in[0,1]$
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+3. This exercise aims to show that differentiation can also be used to prove sequential results. Recall 
+the inequality 
+\begin{equation*}
+    |a+b|^n\leq 2^{n-1}(|a|^n+|b|^n)
+\end{equation*}
+Now try to use differentiable function to prove it.
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+4. Prove that if $f:I\rightarrow\mathbb{R}$ is a differentiable function on interval $I$, and $f'$ is strictly increasing on $I$, 
+then each tangent line intersects $f$ only once.
+    
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+5. Suppose that $f$ satisfies $f''+f'g-f=0$ for some function $g$. Prove that if $f$ is 0 at two distinct points, 
+then $f$ is 0 on the interval between them.
+    
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+6. Let $F$ be an increasing function on $J=(-K,K)$, continuous at $-K$ and $K$. Let $G$ be another such increasing function on $J$ such that 
+\begin{equation*}
+    \underset{x\in J}{\forall}\quad \underset{y\rightarrow x^-}{\lim}F(y)\leq G(x) \leq \underset{y\rightarrow x^+}{\lim}F(y)
+\end{equation*}
+Then the set of points $x\in J$ where the derivative $F'$ exists equals the set of points $x\in J$ where $G'$ exists. Moreover, 
+$F'(x)=G'(x)$ on these points.
+
+
+\end{frame}
+
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+7. In this  exercise, we would like to give a deeper investigation of Lipschitz condition. If a real function $T:\Omega\rightarrow\mathbb{R}$ 
+satisfies
+\begin{equation*}
+    |T(x)-T(y)|\leq k\cdot |x-y|^\alpha
+\end{equation*}
+for any $x,y\in \Omega$, we say $T$ satisfies "\emph{Lipschitz condition of order $\alpha$}".
+\begin{enumerate}
+    \item Show that if $\alpha>0$, then $T$ is continuous.
+    \item Show that if $\alpha>1$, then $T$ is a constant function, i.e.,
+    \begin{equation*}
+        \underset{C\in \mathbb{R}}{\exists}\ T(x)=C
+    \end{equation*}
+\end{enumerate}
+    
+\end{frame}
+
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+8. Suppose $f:[0,n],n\in \mathbb{N}$ is a continuous function, and is differentiable on $(0,n)$. Furthermore, assume that 
+\begin{equation*}
+    f(0)+f(1)+\dots+f(n-1)=n,\ f(n)=1
+\end{equation*} 
+Show that there must exist $c\in (0,n)$ such that $f'(c)=0$.
+
+\end{frame}
+
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+9. Let $f,g$ be two differentiable functions with domain $[0,\infty)$.\\
+Prove that if
+\begin{equation*}
+    f(0)=g(0)\ \text{and} \ f'(x)\geq g'(x)\ \text{for all }x>0
+\end{equation*}
+then 
+\begin{equation*}
+    f(x)\geq g(x) \text{ on } [0,\infty)
+\end{equation*}
+
+\end{frame}
+
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+10. Practical calculation shouldn't be ignored. Please calculate the derivatives of the following functions.
+\begin{itemize}
+    \item $(2x+5x^2)^6$
+    \vspace{0.3em}
+    \item $\frac{\sqrt{x}}{x+1}$
+    \vspace{0.3em}
+    \item $\sqrt[3]{\frac{3x^2+1}{x^2+1}}$
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{End}
+    \vspace{2cm}
+    \Huge \center  Have Fun and Learn Well!
+\end{frame}
+
+\end{document}

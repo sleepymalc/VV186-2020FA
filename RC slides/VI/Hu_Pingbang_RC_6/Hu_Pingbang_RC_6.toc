@@ -1,0 +1,35 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Step Function}{4}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Step Function}{5}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Regulated Integral}{6}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Darboux Integral}{7}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Riemann Integral}{8}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Results/Theorem $\&$ Comment}{9}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Results/Theorem $\&$ Comment}{10}{0}{8}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {9}{Exercise}{11}{0}{9}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {10}{Exercise}{12}{0}{10}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {11}{Exercise}{13}{0}{11}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {12}{Exercise}{14}{0}{12}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {13}{Exercise}{15}{0}{13}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {14}{Exercise}{16}{0}{14}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {15}{Exercise}{17}{0}{15}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {16}{Exercise}{18}{0}{16}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {17}{Exercise*}{19}{0}{17}

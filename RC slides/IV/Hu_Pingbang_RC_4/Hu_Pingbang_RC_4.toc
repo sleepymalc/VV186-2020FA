@@ -1,0 +1,47 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Differentiation -- An Introduction}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Differentiation -- An Introduction}{4}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Derivative}{5}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Derivative}{6}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Derivative}{7}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Derivative}{8}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Rules of Differentiation}{9}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Application of Differentiation}{10}{0}{8}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {9}{Application of Differentiation}{11}{0}{9}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {10}{Application of Differentiation}{12}{0}{10}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {11}{Application of Differentiation}{13}{0}{11}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {12}{Application of Differentiation}{14}{0}{12}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {13}{Exercise}{15}{0}{13}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {14}{Exercise}{16}{0}{14}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {15}{Exercise}{17}{0}{15}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {16}{Exercise}{18}{0}{16}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {17}{Exercise}{19}{0}{17}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {18}{Exercise}{20}{0}{18}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {19}{Exercise}{21}{0}{19}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {20}{Exercise}{22}{0}{20}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {21}{Exercise}{23}{0}{21}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {22}{Exercise}{24}{0}{22}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {23}{Exercise}{25}{0}{23}

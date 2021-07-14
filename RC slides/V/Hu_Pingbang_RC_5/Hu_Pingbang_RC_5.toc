@@ -1,0 +1,65 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Convexity and Concavity}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Convexity and Concavity}{4}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Convexity and Concavity}{5}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Convexity and Concavity}{6}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{L'Hopital's Rule}{7}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{L'Hopital's Rule}{8}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{L'Hopital's Rule}{9}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{L'Hopital's Rule}{10}{0}{8}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {9}{L'Hopital's Rule}{11}{0}{9}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {10}{Vector Space and Subspace}{12}{0}{10}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {11}{Vector Space and Subspace}{13}{0}{11}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {12}{Vector Space and Subspace}{14}{0}{12}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {13}{Vector Space and Subspace}{15}{0}{13}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {14}{Vector Space and Subspace}{16}{0}{14}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {15}{Vector Space and Subspace}{17}{0}{15}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {16}{Vector Space and Subspace}{18}{0}{16}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {17}{Vector Space and Subspace}{19}{0}{17}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {18}{Vector Space and Subspace}{20}{0}{18}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {19}{Norm}{21}{0}{19}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {20}{Norm}{22}{0}{20}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {21}{Convergence in Vector Space}{23}{0}{21}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {22}{Continuity in Vector Space}{24}{0}{22}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {23}{Exercise}{25}{0}{23}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {24}{Exercise}{26}{0}{24}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {25}{Exercise}{27}{0}{25}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {26}{Exercise}{28}{0}{26}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {27}{Exercise}{29}{0}{27}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {28}{Exercise}{30}{0}{28}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {29}{Exercise}{31}{0}{29}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {30}{Exercise}{32}{0}{30}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {31}{Exercise}{33}{0}{31}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {32}{Exercise}{34}{0}{32}
