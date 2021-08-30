@@ -80,27 +80,27 @@
 \section{Motivation}
 \begin{frame}
     \frametitle{Motivation}
-The motivation for integration is simple:
-\begin{itemize}
-    \item Find area under curves.
-    \item Find signed area for real life application.
-    \item Do different kinds of \emph{transformation}.
-    \item Solving equations.
-\end{itemize}
+    The motivation for integration is simple:
+    \begin{itemize}
+        \item Find area under curves.
+        \item Find signed area for real life application.
+        \item Do different kinds of \emph{transformation}.
+        \item Solving equations.
+    \end{itemize}
 \end{frame}
 
 \section{Step Function}
 \begin{frame}
     \frametitle{Step Function}
-\begin{itemize}
-    \item Partition
-    \item Properties of step functions
-        \begin{enumerate}
-            \item If $\varphi$ is a step function on $[a,b]$, then $\forall\alpha\in\mathbb{R}$, $\alpha\varphi$ is also a step function on $[a,b]$.
-            \item If $\varphi,\Psi$ are two step functions on $[a,b]$, then $\varphi+\Psi$ is also a step function on $[a,b]$.
-            \item The set consisting of step functions on $[a,b]$ where $a,b\in\mathbb{R}$ and $a<b$ is a \textbf{vector space}.(Why?)
-        \end{enumerate}
-\end{itemize}
+    \begin{itemize}
+        \item Partition
+        \item Properties of step functions
+              \begin{enumerate}
+                  \item If $\varphi$ is a step function on $[a,b]$, then $\forall\alpha\in\mathbb{R}$, $\alpha\varphi$ is also a step function on $[a,b]$.
+                  \item If $\varphi,\Psi$ are two step functions on $[a,b]$, then $\varphi+\Psi$ is also a step function on $[a,b]$.
+                  \item The set consisting of step functions on $[a,b]$ where $a,b\in\mathbb{R}$ and $a<b$ is a \textbf{vector space}.(Why?)
+              \end{enumerate}
+    \end{itemize}
 
 
 \end{frame}
@@ -108,175 +108,175 @@ The motivation for integration is simple:
 \section{Step Function}
 \begin{frame}
     \frametitle{Step Function}
-Properties of step function integral
-\begin{itemize}
-    \item Given a step function $\varphi:[a,b]\rightarrow\mathbb{R}$, its integral exists and doesn't depend on the choice of partition.
-    \item Let $T:Step([a,b])\rightarrow\mathbb{R}$ be a function (functional) and $T(\varphi)=\int_{a}^{b}\varphi$, then $T$ is a linear function that maps non-negative step functions to non-negative values.
-    \item Let $\varphi\in[a,b]$, then $|\int^{b}_{a}\varphi|\leq\int^{b}_{a}|\varphi|$
-\end{itemize}
-\mbox{}
-\vfill
-\footnotesize($T$ is sometimes called "positive linear functional'')
+    Properties of step function integral
+    \begin{itemize}
+        \item Given a step function $\varphi:[a,b]\rightarrow\mathbb{R}$, its integral exists and doesn't depend on the choice of partition.
+        \item Let $T:Step([a,b])\rightarrow\mathbb{R}$ be a function (functional) and $T(\varphi)=\int_{a}^{b}\varphi$, then $T$ is a linear function that maps non-negative step functions to non-negative values.
+        \item Let $\varphi\in[a,b]$, then $|\int^{b}_{a}\varphi|\leq\int^{b}_{a}|\varphi|$
+    \end{itemize}
+    \mbox{}
+    \vfill
+    \footnotesize($T$ is sometimes called "positive linear functional'')
 \end{frame}
 
 \section{Regulated Integral}
 \begin{frame}
     \frametitle{Regulated Integral}
-\hspace{2em} Let $f\in\text{Reg}([a,b])$ and $(\varphi_n)$ a sequence in $\text{Step}([a,b])$ converging uniformly to $f$. Then the regulated integral of $f$, defined by 
-\begin{equation*}
-    \int_a^bf:=\lim\int_a^b\varphi_n
-\end{equation*}
-exists and does not depend on the choice of $(\varphi_n)$.
+    \hspace{2em} Let $f\in\text{Reg}([a,b])$ and $(\varphi_n)$ a sequence in $\text{Step}([a,b])$ converging uniformly to $f$. Then the regulated integral of $f$, defined by
+    \begin{equation*}
+        \int_a^bf:=\lim\int_a^b\varphi_n
+    \end{equation*}
+    exists and does not depend on the choice of $(\varphi_n)$.
 \end{frame}
 
 \section{Darboux Integral}
 \begin{frame}
     \frametitle{Darboux Integral}
-\hspace{2em} Let $[a,b]\subseteq\mathbb{R}$ be a closed interval and $f$ a bounded real function on $[a,b]$. Let $u_f$ denote the set of all step functions $u$ on $[a,b]$ 
-such that $u\geq f$ and denote $l_f$ the set of all step functions $l$ on $[a,b]$ such that $f\geq l$. The function $f$ is then said to be Darboux-integrable if 
-\begin{equation*}
-    \underline{\mathbb{I}}(f)=\sup_{l\in l_f}\int_a^bl=\inf_{u\in u_f}\int_a^bu=\overline{\mathbb{I}}(f)
-\end{equation*}
+    \hspace{2em} Let $[a,b]\subseteq\mathbb{R}$ be a closed interval and $f$ a bounded real function on $[a,b]$. Let $u_f$ denote the set of all step functions $u$ on $[a,b]$
+    such that $u\geq f$ and denote $l_f$ the set of all step functions $l$ on $[a,b]$ such that $f\geq l$. The function $f$ is then said to be Darboux-integrable if
+    \begin{equation*}
+        \underline{\mathbb{I}}(f)=\sup_{l\in l_f}\int_a^bl=\inf_{u\in u_f}\int_a^bu=\overline{\mathbb{I}}(f)
+    \end{equation*}
 
-\mbox{}
-\vfill\footnotesize
-We denote the integral of $f$ by $\mathbb{I}(f)$ to distinguish with the lower step functions $I$.
+    \mbox{}
+    \vfill\footnotesize
+    We denote the integral of $f$ by $\mathbb{I}(f)$ to distinguish with the lower step functions $I$.
 \end{frame}
 
 \section{Riemann Integral}
 \begin{frame}
     \frametitle{Riemann Integral}
-\hspace{2em} Let$[a,b]\subseteq\mathbb{R}$ be a closed interval and $f$ a bounded real function on $[a,b]$. Then $f$ is Riemann-integrable with integral 
-$\int_a^bf\in\mathbb{R}$ if for every $\epsilon>0$ there exists a $\delta>0$ such that for any tagged partition on $[a,b]$ with mesh size $m(P)<\delta$, 
-\begin{equation*}
-    |\sum^n_{k=1}f(\xi_k)(x_k-x_{k-1})-\int_a^bf|<\epsilon
-\end{equation*}
-
-\mbox{}
-\vfill\footnotesize
-\hspace{1em} Comment. It is also a usual way to define Riemann integral by Darboux integral. In fact, Riemann integral is usually \emph{just the Darboux integral}.
-\end{frame}
-
-\section{Results/Theorem $\&$ Comment}
-\begin{frame}
-    \frametitle{Results/Theorem $\&$ Comment}
-\hspace{2em}
-The following are some results / Theorems $\&$ comments for integrals. They apply to all the three kinds of integrals that we learn in Vv186.
-
-\begin{enumerate}
-    \item The integral is a linear map that maps non-negative functions to non-negative values.\\
-    \vspace{1em}
-    \item Let $f,g$ be two regulated functions on $[a,b]$. Moreover, if $f\leq g$, then $\int_a^bf\leq\int_a^bg$.\\
-        \footnotesize Comment. This can be proved by taking the limit of the step functions.
-\end{enumerate}
-
-\end{frame}
-
-\section{Results/Theorem $\&$ Comment}
-\begin{frame}
-    \frametitle{Results/Theorem $\&$ Comment}
-\begin{enumerate}
-    \item[3.] The integral of $f$ doesn't change if $f$ changes its value on a \textbf{finite} set and is still integrable.\\
-    \vspace{1em}
-    \item[4.] The integral of $f$ doesn't change if $f$ changes its value on a \textbf{countable} set and is still integrable. If we take the usual understanding of "length of interval'' to integrate.\\
-    \footnotesize Comment. It is important that $f$ is \emph{integrable}.\\
-    \footnotesize Comment. This set is usually called \emph{measured zero set}.\\
-    \vspace{1em}
-    \item[5.] The Riemann integral, Darboux integral and the regulated integral of $f$ exist and coincide if $f$ is regulated.
-\end{enumerate}
-\end{frame}
-
-\section{Exercise}
-\begin{frame}
-    \frametitle{Exercise}
-1. This exercise gives an example of using step function sequence to find the integral of a function. Calculate
-\begin{equation*}
-    \int_0^1x^4
-\end{equation*}
-\end{frame}
-
-\section{Exercise}
-\begin{frame}
-    \frametitle{Exercise}
-2. 
-\begin{itemize}
-    \item Check whether the function $J$ given by 
+    \hspace{2em} Let$[a,b]\subseteq\mathbb{R}$ be a closed interval and $f$ a bounded real function on $[a,b]$. Then $f$ is Riemann-integrable with integral
+    $\int_a^bf\in\mathbb{R}$ if for every $\epsilon>0$ there exists a $\delta>0$ such that for any tagged partition on $[a,b]$ with mesh size $m(P)<\delta$,
     \begin{equation*}
-        J:[0,1]\rightarrow\mathbb{R}, \qquad J(x)=
-    \begin{cases}
-        1 & x=\frac{1}{n}\\
-        0 & otherwise    
-    \end{cases}
-    \end{equation*} 
-    is regulated.\\
-    \vspace{1em}
-    \item Check whether the function $J$ we defined in i) is Riemann integrable.
-\end{itemize}
+        |\sum^n_{k=1}f(\xi_k)(x_k-x_{k-1})-\int_a^bf|<\epsilon
+    \end{equation*}
+
+    \mbox{}
+    \vfill\footnotesize
+    \hspace{1em} Comment. It is also a usual way to define Riemann integral by Darboux integral. In fact, Riemann integral is usually \emph{just the Darboux integral}.
+\end{frame}
+
+\section{Results/Theorem \& Comment}
+\begin{frame}
+    \frametitle{Results/Theorem \& Comment}
+    \hspace{2em}
+    The following are some results / Theorems $\&$ comments for integrals. They apply to all the three kinds of integrals that we learn in Vv186.
+
+    \begin{enumerate}
+        \item The integral is a linear map that maps non-negative functions to non-negative values.\\
+              \vspace{1em}
+        \item Let $f,g$ be two regulated functions on $[a,b]$. Moreover, if $f\leq g$, then $\int_a^bf\leq\int_a^bg$.\\
+              \footnotesize Comment. This can be proved by taking the limit of the step functions.
+    \end{enumerate}
+
+\end{frame}
+
+\section{Results/Theorem $\&$ Comment}
+\begin{frame}
+    \frametitle{Results/Theorem $\&$ Comment}
+    \begin{enumerate}
+        \item[3.] The integral of $f$ doesn't change if $f$ changes its value on a \textbf{finite} set and is still integrable.\\
+            \vspace{1em}
+        \item[4.] The integral of $f$ doesn't change if $f$ changes its value on a \textbf{countable} set and is still integrable. If we take the usual understanding of "length of interval'' to integrate.\\
+            \footnotesize Comment. It is important that $f$ is \emph{integrable}.\\
+            \footnotesize Comment. This set is usually called \emph{measured zero set}.\\
+            \vspace{1em}
+        \item[5.] The Riemann integral, Darboux integral and the regulated integral of $f$ exist and coincide if $f$ is regulated.
+    \end{enumerate}
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-3. Please judge whether the following statements are true or false.
-\begin{itemize}
-    \item $f(x)=x^3+e^x$ on $[-1,1]$ is regulated.
-    \item Since $f(x)=x^2$ is regulated on each $[-n,n]$, where $n\in\mathbb{N}$, $f$ is regulated on $\mathbb{R}$, because we can let $n\rightarrow\infty$.
-    \item A continuous function is piecewise continuous.
-    \item Let $f,g$ be two real-valued functions defined on $[0,1]$. Furthermore, assume $f-g=x$, then the equation \begin{equation*}
-        \int_0^1f-\int_0^1g=\frac{1}{2}
-    \end{equation*} holds.
-    \item Let $f\in\text{Reg}([0,1])$, let $g$ be a real-valued function. The $f\circ g$ is regulated.
-\end{itemize}
+    1. This exercise gives an example of using step function sequence to find the integral of a function. Calculate
+    \begin{equation*}
+        \int_0^1x^4
+    \end{equation*}
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-4. Now let's prove the assertion on Slide 543. Let $f$ be a bounded real function on $[a,b]$ and $f$ is Darboux integrable. Please show that it is Riemann integrable on $[a,b]$.
+    2.
+    \begin{itemize}
+        \item Check whether the function $J$ given by
+              \begin{equation*}
+                  J:[0,1]\rightarrow\mathbb{R}, \qquad J(x)=
+                  \begin{cases}
+                      1 & x=\frac{1}{n} \\
+                      0 & otherwise
+                  \end{cases}
+              \end{equation*}
+              is regulated.\\
+              \vspace{1em}
+        \item Check whether the function $J$ we defined in i) is Riemann integrable.
+    \end{itemize}
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+    3. Please judge whether the following statements are true or false.
+    \begin{itemize}
+        \item $f(x)=x^3+e^x$ on $[-1,1]$ is regulated.
+        \item Since $f(x)=x^2$ is regulated on each $[-n,n]$, where $n\in\mathbb{N}$, $f$ is regulated on $\mathbb{R}$, because we can let $n\rightarrow\infty$.
+        \item A continuous function is piecewise continuous.
+        \item Let $f,g$ be two real-valued functions defined on $[0,1]$. Furthermore, assume $f-g=x$, then the equation \begin{equation*}
+                  \int_0^1f-\int_0^1g=\frac{1}{2}
+              \end{equation*} holds.
+        \item Let $f\in\text{Reg}([0,1])$, let $g$ be a real-valued function. The $f\circ g$ is regulated.
+    \end{itemize}
+\end{frame}
+
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise}
+    4. Now let's prove the assertion on Slide 543. Let $f$ be a bounded real function on $[a,b]$ and $f$ is Darboux integrable. Please show that it is Riemann integrable on $[a,b]$.
 
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-5. Let $f$ be a piecewise continuous function on $[a,b]$. Prove that $f$ is regulated, i.e., for any $\epsilon>0$, there exists a step function $\varphi$ such that 
-\begin{equation*}
-    \sup_{x\in[a,b]}|f(x)-\varphi(x)|<\epsilon
-\end{equation*}
+    5. Let $f$ be a piecewise continuous function on $[a,b]$. Prove that $f$ is regulated, i.e., for any $\epsilon>0$, there exists a step function $\varphi$ such that
+    \begin{equation*}
+        \sup_{x\in[a,b]}|f(x)-\varphi(x)|<\epsilon
+    \end{equation*}
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-6. This exercise aims at showing two more characteristics of $\text{Reg}([a,b])$. Let $f,g\in\text{Reg}([a,b])$, 
-\begin{enumerate}
-    \item Show that the $f\cdot g\in\text{Reg}([a,b])$
-    \item Show that $f^2\in\text{Reg}([a,b])$
-    \item Suppose $f\geq p>0$ for some $p\in \mathbb{R}$. Show that $\frac{1}{f}\in\text{Reg}([a,b])$.
-\end{enumerate}
+    6. This exercise aims at showing two more characteristics of $\text{Reg}([a,b])$. Let $f,g\in\text{Reg}([a,b])$,
+    \begin{enumerate}
+        \item Show that the $f\cdot g\in\text{Reg}([a,b])$
+        \item Show that $f^2\in\text{Reg}([a,b])$
+        \item Suppose $f\geq p>0$ for some $p\in \mathbb{R}$. Show that $\frac{1}{f}\in\text{Reg}([a,b])$.
+    \end{enumerate}
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-7. Give an example such that $\int_a^b|f|$ is Riemann integrable but $\int_a^bf$ is not Riemann integrable. Is the converse true?
+    7. Give an example such that $\int_a^b|f|$ is Riemann integrable but $\int_a^bf$ is not Riemann integrable. Is the converse true?
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-8. Let $f:[a,b]\rightarrow\mathbb{R}$, $f$ is monotonic on $[a,b]$. Prove that $f$ is regulated. Is $f$ integrable?
+    8. Let $f:[a,b]\rightarrow\mathbb{R}$, $f$ is monotonic on $[a,b]$. Prove that $f$ is regulated. Is $f$ integrable?
 \end{frame}
 
 \section{Exercise*}
 \begin{frame}
     \frametitle{Exercise*}
-9. Given $\epsilon>0$. For any regulated function $f:[0,1]\rightarrow\mathbb{R}$. There exists a continuous function $g:[0,1]\rightarrow\mathbb{R}$ 
-such that 
-\begin{equation*}
-    |\int_0^1f-\int_0^1g|<\epsilon\qquad\text{and}\qquad |f(x)-g(x)|<\epsilon\text{ on }[0,1]
-\end{equation*}
-except for a finite number of intervals with total length less than $\epsilon$.
+    9. Given $\epsilon>0$. For any regulated function $f:[0,1]\rightarrow\mathbb{R}$. There exists a continuous function $g:[0,1]\rightarrow\mathbb{R}$
+    such that
+    \begin{equation*}
+        |\int_0^1f-\int_0^1g|<\epsilon\qquad\text{and}\qquad |f(x)-g(x)|<\epsilon\text{ on }[0,1]
+    \end{equation*}
+    except for a finite number of intervals with total length less than $\epsilon$.
 \end{frame}
 
 \begin{frame}

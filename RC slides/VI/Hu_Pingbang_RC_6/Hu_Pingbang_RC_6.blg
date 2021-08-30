@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'Hu_Pingbang_RC_6.blg'
-[101] biber-darwin:322> INFO - === Mon Nov 30, 2020, 03:27:25
-[124] Biber.pm:415> INFO - Reading 'Hu_Pingbang_RC_6.bcf'
-[238] Utils.pm:304> WARN - No data sources defined!
