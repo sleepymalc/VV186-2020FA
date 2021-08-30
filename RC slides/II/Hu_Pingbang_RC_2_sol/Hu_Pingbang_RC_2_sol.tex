@@ -22,8 +22,8 @@
 
 \definecolor{Turquoise3}{RGB}{0, 134, 139}
 \renewcommand{\emph}[1]{{\color{Turquoise3}\textsl{#1}}}
-\newcommand{\C}{\mathbb{C}} \newcommand{\F}{\mathbb{F}} \newcommand{\R}{\mathbb{R}} \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}} \newcommand{\F}{\mathbb{F}} \newcommand{\R}{\mathbb{R}} \newcommand{\Q}{\mathbb{Q}}\newcommand{\N}{\mathbb{N}}
+\newcommand{\myqed}{\hfill$\square$}
 \newcommand{\myseries}[2]{$#1_1,#1_2,\dots,#1_#2$}
 \newcommand{\nullspace}{~\\[15pt]}
 \newcommand{\remark}{\textbf{Remark: }}
@@ -68,350 +68,354 @@
 
 \begin{frame}
     \frametitle{Exercises-I}
-1. When learning the axioms of rational number, one student found that the operation of subsets of a non-empty 
-set $X$ is somewhat similar to that of rational number:\\
-\vspace{1em}
-If we regard $\cup$ as $+$, $\cap$ as $\cdot$, then the equation 
-\begin{equation*}
-    A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
-\end{equation*}
-is just the distributivity law. Help him  check whether P1 -- P9 also hold for such operations.
+    1. When learning the axioms of rational number, one student found that the operation of subsets of a non-empty
+    set $X$ is somewhat similar to that of rational number:\\
+    \vspace{1em}
+    If we regard $\cup$ as $+$, $\cap$ as $\cdot$, then the equation
+    \begin{equation*}
+        A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
+    \end{equation*}
+    is just the distributivity law. Help him  check whether P1 -- P9 also hold for such operations.
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-I}
-We check by enumerating P1 -- P9.
-\begin{enumerate}
-    \item $A\cup(B\cup C) = (A\cup B)\cup C$
-    \item $A\cup \emptyset =\emptyset \cup A=A$
-    \item $A\cup B=B\cup A$
-    \item \emph{$A^c\cup A=A\cup A^c=X$}
-    \item $A\cap(B\cap C) = (A\cap B)\cap C$
-    \item $A\cap X = X\cap A=A$
-    \item $A\cap B=B\cap A $
-    \item \emph{$A\cap \emptyset=\emptyset \cap A=\emptyset$}
-    \item $A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$
-\end{enumerate}
-As we can see, P4 and P8 does not hold, since we can't find the inverse element for $\cup$ and $\cap$, so the answer of this 
-exercise is no.$\quad \square$
+    We check by enumerating P1 -- P9.
+    \begin{enumerate}
+        \item $A\cup(B\cup C) = (A\cup B)\cup C$
+        \item $A\cup \emptyset =\emptyset \cup A=A$
+        \item $A\cup B=B\cup A$
+        \item \emph{$A^c\cup A=A\cup A^c=X$}
+        \item $A\cap(B\cap C) = (A\cap B)\cap C$
+        \item $A\cap X = X\cap A=A$
+        \item $A\cap B=B\cap A $
+        \item \emph{$A\cap \emptyset=\emptyset \cap A=\emptyset$}
+        \item $A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$
+    \end{enumerate}
+    As we can see, P4 and P8 does not hold, since we can't find the inverse element for $\cup$ and $\cap$, so the answer of this
+    exercise is no.
+    \myqed
 \end{frame}
 
 \begin{frame}
     \frametitle{Exercises-I}
-2.
-\begin{enumerate}
-    \item Prove that for $a_i\in \mathbb{Q}, i\in \mathbb{N^*}$, and $n$ is a natural number, 
-        \begin{equation*}
-            |\sum^n_{i=1}a_i|\leq\sum^n_{i=1}|a_i|
-        \end{equation*}
-    \item Prove that $|a-c|\leq |a-b| +|c-b|$
-\end{enumerate}
+    2.
+    \begin{enumerate}
+        \item Prove that for $a_i\in \mathbb{Q}, i\in \mathbb{N^*}$, and $n$ is a natural number,
+              \begin{equation*}
+                  |\sum^n_{i=1}a_i|\leq\sum^n_{i=1}|a_i|
+              \end{equation*}
+        \item Prove that $|a-c|\leq |a-b| +|c-b|$
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-I}
-2 -- 1\\
-$Proof$ :
-        \begin{equation*}
-            \begin{split}
-                |\sum^n_{i=1}a_i| &=|a_1+a_2+\dots+a_n|
-                    =|(a_1+\dots+a_{n-1})+a_n|\\
-                    &\leq |a_1+\dots+a_{n-1}|+|a_n|
-                    \leq \dots\\
-                    &.\\
-                    &.\\
-                    &.\\
-                    &\leq |a_1|+|a_2|+\dots+|a_n|=\sum^n_{i=1}|a_i|\quad\square
-            \end{split}
-        \end{equation*}
+    2 -- 1\\
+    $Proof$ :
+    \begin{equation*}
+        \begin{split}
+            |\sum^n_{i=1}a_i| &=|a_1+a_2+\dots+a_n|
+            =|(a_1+\dots+a_{n-1})+a_n|\\
+            &\leq |a_1+\dots+a_{n-1}|+|a_n|
+            \leq \dots\\
+            &.\\
+            &.\\
+            &.\\
+            &\leq |a_1|+|a_2|+\dots+|a_n|=\sum^n_{i=1}|a_i|
+        \end{split}
+    \end{equation*}
+    \myqed
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-I}
-2 -- 2\\
-$Proof$ :
-        \begin{equation*}
-            \begin{split}
-                |a-c|&=|a+b-b-c|\\
-                     &=|(a-b)+(b-c)|\\
-                     &\leq|a-b|+|b-c|\\
-                     &=|a-b|+|c-b| \quad \square
-            \end{split}
-        \end{equation*}
+    2 -- 2\\
+    $Proof$ :
+    \begin{equation*}
+        \begin{split}
+            |a-c|&=|a+b-b-c|\\
+            &=|(a-b)+(b-c)|\\
+            &\leq|a-b|+|b-c|\\
+            &=|a-b|+|c-b|
+        \end{split}
+    \end{equation*}
+    \myqed
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Exercises-I}
-3. We define $\mathbb{R}$ as a set containing rational numbers and the limits of rational numbers. 
-Let $E\subseteq \mathbb{R}$ a non-empty subset of that is bounded above in $\mathbb{R}$. Now we don't 
-assume P13 is an axiom. We want to prove P13 with P1 -- P12 and other facts that we know:
-\begin{itemize}
-    \item Let's call the set of form $(a,+\infty)$ or $[a,+\infty)$ \emph{up interval}. Prove that the 
-        set of $E$'s upper bound, denoted by $U$, is an \emph{up interval}.
-    \item (\textbf{Theorem 2.2}) $E$ has a least upper bound.
-\end{itemize}
+    3. We define $\mathbb{R}$ as a set containing rational numbers and the limits of rational numbers.
+    Let $E\subseteq \mathbb{R}$ a non-empty subset of that is bounded above in $\mathbb{R}$. Now we don't
+    assume P13 is an axiom. We want to prove P13 with P1 -- P12 and other facts that we know:
+    \begin{itemize}
+        \item Let's call the set of form $(a,+\infty)$ or $[a,+\infty)$ \emph{up interval}. Prove that the
+              set of $E$'s upper bound, denoted by $U$, is an \emph{up interval}.
+        \item (\textbf{Theorem 2.2}) $E$ has a least upper bound.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solutions-I}
-3 -- 1\\
-$Proof$ : \\
-\hspace{1em} We first prove that $U$ is an interval by contradiction. Suppose U is not an interval, then we can see 
-\begin{equation*}
-    \exists\ m\notin U\ 
-    \begin{cases}
-        U\cap(-\infty, m)\neq \emptyset\\
-        U\cap(m,\infty)\neq \emptyset
-    \end{cases}
-\end{equation*}
-\hspace{1em} From here, we have two useful conditions as follows.
+    3 -- 1\\
+    $Proof$ : \\
+    \hspace{1em} We first prove that $U$ is an interval by contradiction. Suppose U is not an interval, then we can see
+    \begin{equation*}
+        \exists\ m\notin U\
+        \begin{cases}
+            U\cap(-\infty, m)\neq \emptyset \\
+            U\cap(m,\infty)\neq \emptyset
+        \end{cases}
+    \end{equation*}
+    \hspace{1em} From here, we have two useful conditions as follows.
     \begin{enumerate}
         \item Since $m\notin U$, $\underset{x\in E}{\exists}\ x>m $.
-        \item Since $(-\infty,m)\cap U\neq \emptyset$, $\exists\ y\in (-\infty,m)\cap U\Rightarrow 
-        \begin{cases}
-          y<m\\
-          y\in U  
-        \end{cases}$
+        \item Since $(-\infty,m)\cap U\neq \emptyset$, $\exists\ y\in (-\infty,m)\cap U\Rightarrow
+                  \begin{cases}
+                      y<m \\
+                      y\in U
+                  \end{cases}$
     \end{enumerate}
-\hspace{1em} Finally, we get $y<m<x$, but this is a contradiction since $y$ is an upper bound but $y<x\in E$.
+    \hspace{1em} Finally, we get $y<m<x$, but this is a contradiction since $y$ is an upper bound but $y<x\in E$.
 \end{frame}
 
 \begin{frame}
     \frametitle{Solutions-I}
-3 -- 1\\
-$Proof(continue)$ : \\
-\hspace{1em} Then, we know U is an interval now. Because $U$ is clearly bounded below by some element in $E$, let say $a$, then 
-$U$ should have this form:
-\begin{equation*}
-    U=(a,b)\ or\ U=[a,b)
-\end{equation*}
-for some $b$. And because if $b\in U$, then clearly $b+c\in U$ for $c>0$, we know that 
-\begin{equation*}
-    U=(a,\infty)\ or\ U=[a,\infty)
-\end{equation*}
-so U is an up interval.$\quad \square$
-
+    3 -- 1\\
+    $Proof(continue)$ : \\
+    \hspace{1em} Then, we know U is an interval now. Because $U$ is clearly bounded below by some element in $E$, let say $a$, then
+    $U$ should have this form:
+    \begin{equation*}
+        U=(a,b)\ or\ U=[a,b)
+    \end{equation*}
+    for some $b$. And because if $b\in U$, then clearly $b+c\in U$ for $c>0$, we know that
+    \begin{equation*}
+        U=(a,\infty)\ or\ U=[a,\infty)
+    \end{equation*}
+    so U is an up interval.
+    \myqed
 \end{frame}
 
 \begin{frame}
     \frametitle{Solutions-I}
-3 -- 2\\
-$Proof$ : \\
-We consider two cases.\\
-First, if $U=[a,\infty)$, then clearly, $U$ has a minimum $a$, and which is the least upper bound of $E$.\\
-Second, if $U=(a,\infty)$, then we know
-\begin{equation*}
-    \begin{cases}
-        \underset{x\in E}{\exists}\ x>a\Rightarrow\ \underset{\epsilon>0}{\exists}\ x=a+2\epsilon\\
-        \underset{\epsilon>0}{\forall}\ a+\epsilon\in U\ \Rightarrow\ a+\epsilon>x
-    \end{cases}
-\end{equation*}
-We simply fixed the $\epsilon$ we found in equation 1, and then plug in to the equation 2, we get 
-\begin{equation*}
-    a+\epsilon>x=a+2\epsilon\ \Rightarrow\ \epsilon<0
-\end{equation*}
-Which contradicts to our chosen condition of $\epsilon$, so we know the second case $U=(a,\infty)$ can not be the case.$\quad\square$
-
+    3 -- 2\\
+    $Proof$ : \\
+    We consider two cases.\\
+    First, if $U=[a,\infty)$, then clearly, $U$ has a minimum $a$, and which is the least upper bound of $E$.\\
+    Second, if $U=(a,\infty)$, then we know
+    \begin{equation*}
+        \begin{cases}
+            \underset{x\in E}{\exists}\ x>a\Rightarrow\ \underset{\epsilon>0}{\exists}\ x=a+2\epsilon \\
+            \underset{\epsilon>0}{\forall}\ a+\epsilon\in U\ \Rightarrow\ a+\epsilon>x
+        \end{cases}
+    \end{equation*}
+    We simply fixed the $\epsilon$ we found in equation 1, and then plug in to the equation 2, we get
+    \begin{equation*}
+        a+\epsilon>x=a+2\epsilon\ \Rightarrow\ \epsilon<0
+    \end{equation*}
+    Which contradicts to our chosen condition of $\epsilon$, so we know the second case $U=(a,\infty)$ can not be the case.
+    \myqed
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Exercises-I$^*$}
-4. Let $A$ be bounded set in $\mathbb{R}$ (which means that the total set is $\mathbb{R}$), for any $\epsilon>0$, 
-there is an element $x$ in $A$ such that $|x-supA|<\epsilon$.
+    4. Let $A$ be bounded set in $\mathbb{R}$ (which means that the total set is $\mathbb{R}$), for any $\epsilon>0$,
+    there is an element $x$ in $A$ such that $|x-supA|<\epsilon$.
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-I}
-4\\
-$Proof$ : \\
-\hspace{1em} We proceed our proof by contradiction. Suppose this is not true, namely there is an $\epsilon>0$ such 
-that for all $x\in A$ we have 
-\begin{equation*}
-    |x-\sup A|\geq \epsilon
-\end{equation*}
-But then we know, $\sup A-\frac{1}{2}\epsilon$ is an upper bound of $A$, which leads to a contradiction.$\quad\square$
+    4\\
+    $Proof$ : \\
+    \hspace{1em} We proceed our proof by contradiction. Suppose this is not true, namely there is an $\epsilon>0$ such
+    that for all $x\in A$ we have
+    \begin{equation*}
+        |x-\sup A|\geq \epsilon
+    \end{equation*}
+    But then we know, $\sup A-\frac{1}{2}\epsilon$ is an upper bound of $A$, which leads to a contradiction.
+    \myqed
 \end{frame}
 
 \begin{frame}
     \frametitle{Exercise-II}
-5. A sequence is defined as
-\begin{equation*}
-    (S_n)_{n\in\mathbb{N}},\ S_1=\sqrt{2},\ S_2=\sqrt{2\sqrt{2}},\ S_3=\sqrt{2\sqrt{2\sqrt{2}}}
-\end{equation*}
-Please calculate the limit of $(S_n)$ as $n\rightarrow \infty$, if it exists.
+    5. A sequence is defined as
+    \begin{equation*}
+        (S_n)_{n\in\mathbb{N}},\ S_1=\sqrt{2},\ S_2=\sqrt{2\sqrt{2}},\ S_3=\sqrt{2\sqrt{2\sqrt{2}}}
+    \end{equation*}
+    Please calculate the limit of $(S_n)$ as $n\rightarrow \infty$, if it exists.
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-I}
-5.\\
-\hspace{1em} Since we don't know whether the limit of $(S_n)$ exist or not, we must first prove the existence, then do the following
-calculation.\\
-\hspace{1em} We proceed as follows. First, we observe that $(S_n)$ is bounded since
-\begin{equation*}
-    0\leq S_n=\underbrace{\sqrt{2\sqrt{2\sqrt{2\dots\sqrt{2}}}}}_{n\ square\ roots} \leq \underbrace{\sqrt{2\sqrt{2\sqrt{2\dots 2}}}}_{n\ square\ roots}=2
-\end{equation*}
-We get the right-hand side by replacing the last $\sqrt{2}$ by $2$ 
-from the left-hand side.\\
-\hspace{1em} We conclude that the sequence $(S_n)$ is bounded. Our goal is to prove $(S_n)$ is convergent, so we now only need to prove 
-$(S_n)$ is monotonic, then we can deduce the convergence from our already known lemma.
+    5.\\
+    \hspace{1em} Since we don't know whether the limit of $(S_n)$ exist or not, we must first prove the existence, then do the following
+    calculation.\\
+    \hspace{1em} We proceed as follows. First, we observe that $(S_n)$ is bounded since
+    \begin{equation*}
+        0\leq S_n=\underbrace{\sqrt{2\sqrt{2\sqrt{2\dots\sqrt{2}}}}}_{n\ square\ roots} \leq \underbrace{\sqrt{2\sqrt{2\sqrt{2\dots 2}}}}_{n\ square\ roots}=2
+    \end{equation*}
+    We get the right-hand side by replacing the last $\sqrt{2}$ by $2$
+    from the left-hand side.\\
+    \hspace{1em} We conclude that the sequence $(S_n)$ is bounded. Our goal is to prove $(S_n)$ is convergent, so we now only need to prove
+    $(S_n)$ is monotonic, then we can deduce the convergence from our already known lemma.
 \end{frame}
 
 \begin{frame}{Solution-I}
-$(continue)$\\
-\hspace{1em} Since $S_{n+1}=\sqrt{2S_n}$ for $n\geq 1$. When $n\geq 1$,
-\begin{equation*}
-    \frac{S_{n+1}}{S_n}=\frac{\sqrt{2Sn}}{Sn}=\frac{\sqrt{2}}{\sqrt{S_n}}>\frac{\sqrt{2}}{\sqrt{2}}=1
-\end{equation*}
-\hspace{1em} It is easy to see that $(S_n)$ is strictly increasing, which means it is monotonic, 
-hence convergent.\\
-\hspace{1em} To calculate the limit, we use the equation 
-\begin{equation*}
-    \lim_{n\rightarrow\infty} S_{n+1}=\lim_{n\rightarrow\infty} S_n =: L
-\end{equation*}
-\hspace{1em} Which leads to $\sqrt{2L}=L$. By solving this equation and the fact that $S_n\geq S_1=1$, so $L=2$, which mean the limit is 2.$\quad \square$ 
-
+    $(continue)$\\
+    \hspace{1em} Since $S_{n+1}=\sqrt{2S_n}$ for $n\geq 1$. When $n\geq 1$,
+    \begin{equation*}
+        \frac{S_{n+1}}{S_n}=\frac{\sqrt{2Sn}}{Sn}=\frac{\sqrt{2}}{\sqrt{S_n}}>\frac{\sqrt{2}}{\sqrt{2}}=1
+    \end{equation*}
+    \hspace{1em} It is easy to see that $(S_n)$ is strictly increasing, which means it is monotonic,
+    hence convergent.\\
+    \hspace{1em} To calculate the limit, we use the equation
+    \begin{equation*}
+        \lim_{n\rightarrow\infty} S_{n+1}=\lim_{n\rightarrow\infty} S_n =: L
+    \end{equation*}
+    \hspace{1em} Which leads to $\sqrt{2L}=L$. By solving this equation and the fact that $S_n\geq S_1=1$, so $L=2$, which mean the limit is 2.
+    \myqed
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Exercise-II}
-6. Let $(a_n),(b_n)$ be two real sequences. Furthermore, assume that $a_n<b_n$
-for all $n$, $[a_{n+1}, b_{n+1}]\subseteq [a_n,b_n]$, $\lim (a_n-b_n)=0$. Prove that there 
-is an unique $m\in [a_n,b_n]$ for all $n$, such that 
-\begin{equation*}
-    \lim a_n=\lim b_n=m
-\end{equation*}
+    6. Let $(a_n),(b_n)$ be two real sequences. Furthermore, assume that $a_n<b_n$
+    for all $n$, $[a_{n+1}, b_{n+1}]\subseteq [a_n,b_n]$, $\lim (a_n-b_n)=0$. Prove that there
+    is an unique $m\in [a_n,b_n]$ for all $n$, such that
+    \begin{equation*}
+        \lim a_n=\lim b_n=m
+    \end{equation*}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II}
-6.\\
-$Proof$ : \\
-\hspace{1em} We first show that $(a_n),(b_n)$ are convergent. Notice that $[a_{n+1}, b_{n+1}]\subseteq [a_n,b_n]$ 
-means that $(a_n)$ is increasing, while $(b_n)$ is decreasing. Furthermore, both $(a_n)$ and $(b_n)$ are bounded by 
-$[a_0,b_0]$. Therefore, $(a_n)$ and $(b_n)$ are convergent.\\
-\hspace{1em} Next we show that $\lim a_n=\lim b_n$. Suppose $\lim b_n=L$, where $L$ is a unique number since a sequence 
-has precisely one limit. Then we know 
-\begin{equation*}
-    \lim a_n=\lim [(a_n-b_n)+b_n]=\lim (a_n-b_n) + \lim b_n= 0+L=L
-\end{equation*}
-Moreover, since 
-$\begin{cases}
-    L \geq a_n\\
-    L \leq b_n
-\end{cases}$, we know that $L\in [a_n,b_n]$.$\quad\square$
-
+    6.\\
+    $Proof$ : \\
+    \hspace{1em} We first show that $(a_n),(b_n)$ are convergent. Notice that $[a_{n+1}, b_{n+1}]\subseteq [a_n,b_n]$
+    means that $(a_n)$ is increasing, while $(b_n)$ is decreasing. Furthermore, both $(a_n)$ and $(b_n)$ are bounded by
+    $[a_0,b_0]$. Therefore, $(a_n)$ and $(b_n)$ are convergent.\\
+    \hspace{1em} Next we show that $\lim a_n=\lim b_n$. Suppose $\lim b_n=L$, where $L$ is a unique number since a sequence
+    has precisely one limit. Then we know
+    \begin{equation*}
+        \lim a_n=\lim [(a_n-b_n)+b_n]=\lim (a_n-b_n) + \lim b_n= 0+L=L
+    \end{equation*}
+    Moreover, since
+    $\begin{cases}
+            L \geq a_n \\
+            L \leq b_n
+        \end{cases}$, we know that $L\in [a_n,b_n]$.
+    \myqed
 \end{frame}
 
 \begin{frame}
     \frametitle{Exercise-II}
-7. Let $(x_n)$ be a bounded real sequence. Then define
-\begin{equation*}
-     a_n:=\sup_{m\geq n}(x_m),\quad b_n:=\inf_{m\geq n}(x_m) 
-\end{equation*}
+    7. Let $(x_n)$ be a bounded real sequence. Then define
+    \begin{equation*}
+        a_n:=\sup_{m\geq n}(x_m),\quad b_n:=\inf_{m\geq n}(x_m)
+    \end{equation*}
 
-\begin{enumerate}
-    \item Prove that $(a_n)$ is decreasing, while $(b_n)$ is increasing.
-    \item Since both $(a_n),(b_n)$ are monotonic and bounded, they are convergent. 
-        We denote $\underline{\lim} x_n=\lim b_n$; $\overline{\lim}x_n=\lim a_n$. Show that:
-        \begin{equation*}
-            \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
-        \end{equation*}
-\end{enumerate}
+    \begin{enumerate}
+        \item Prove that $(a_n)$ is decreasing, while $(b_n)$ is increasing.
+        \item Since both $(a_n),(b_n)$ are monotonic and bounded, they are convergent.
+              We denote $\underline{\lim} x_n=\lim b_n$; $\overline{\lim}x_n=\lim a_n$. Show that:
+              \begin{equation*}
+                  \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
+              \end{equation*}
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II}
-7 -- 1\\
-$Proof$ : \\
-\hspace{1em} This follows from the fact that for two bounded sets $A,B$ in $\mathbb{R}$ with $A\supseteq B$, the supremum of $A$ is no less than 
-the supremum of $B$.  Similarly, for two bounded sets $A,B$ in $\mathbb{R}$ with $A\supseteq B$, the infimum of $A$ is no greater than the infimum of $B$.
+    7 -- 1\\
+    $Proof$ : \\
+    \hspace{1em} This follows from the fact that for two bounded sets $A,B$ in $\mathbb{R}$ with $A\supseteq B$, the supremum of $A$ is no less than
+    the supremum of $B$.  Similarly, for two bounded sets $A,B$ in $\mathbb{R}$ with $A\supseteq B$, the infimum of $A$ is no greater than the infimum of $B$.
 
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Solution-II}
-7 -- 2\\
-$Proof$ : \\
-\hspace{1em} We precede from the left-hand side. Start from the first inequality: 
-\begin{equation*}
-    \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n) 
-\end{equation*}
-\hspace{1em} Fix $\epsilon>0$, there is an $M\in \mathbb{N}$ such that $\underset{n>M}{\forall}\ y_n\geq \underline{\lim}y_n-\frac{\epsilon}{4}$, and 
-$z_n \geq \underline{\lim}z_n-\frac{\epsilon}{4}$. So we have $\underline{\lim}y_n+\underline{\lim}z_n-\frac{\epsilon}{2}\leq(y_n+z_n)$ for all such $n$. 
-Next, we claim that there is always a subsequence of $(y_n+z_n)$ such that it converges to $\underline{\lim}(y_n+z_n)$.\\
-\hspace{1em} Fix arbitrary $t>0$, $\underset{M\in\mathbb{N}}{\forall}\ \underset{n_k\geq M}{\exists}$ such that 
-\begin{equation*}
-    \begin{cases}
-    |(y_{n_k}+z_{n_k})-\inf_{m\geq M}(y_m+z_m)|<\frac{1}{2}t\\
-    |(y_{n_k}+z_{n_k})-\underline{\lim}(y_n+z_n)|<\frac{1}{2}t\\
-\end{cases}
-\end{equation*}
- 
 
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II}
-7 -- 2\\
-$Proof(continue)$ : \\
-\hspace{1em} We know $|(y_{n_k}+z_{n_k})-\underline{\lim}(y_n-z_n)|<t$. This means for large enough $n_k$ (at least $n_k>M$) we make sure that 
-$(y_{n_k}+z_{n_k})\leq \underline{\lim}(y_n+z_n)+\frac{\epsilon}{2}$ and also 
-\begin{equation*}
+    7 -- 2\\
+    $Proof$ : \\
+    \hspace{1em} We precede from the left-hand side. Start from the first inequality:
+    \begin{equation*}
+        \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n)
+    \end{equation*}
+    \hspace{1em} Fix $\epsilon>0$, there is an $M\in \mathbb{N}$ such that $\underset{n>M}{\forall}\ y_n\geq \underline{\lim}y_n-\frac{\epsilon}{4}$, and
+    $z_n \geq \underline{\lim}z_n-\frac{\epsilon}{4}$. So we have $\underline{\lim}y_n+\underline{\lim}z_n-\frac{\epsilon}{2}\leq(y_n+z_n)$ for all such $n$.
+    Next, we claim that there is always a subsequence of $(y_n+z_n)$ such that it converges to $\underline{\lim}(y_n+z_n)$.\\
+    \hspace{1em} Fix arbitrary $t>0$, $\underset{M\in\mathbb{N}}{\forall}\ \underset{n_k\geq M}{\exists}$ such that
+    \begin{equation*}
+        \begin{cases}
+            |(y_{n_k}+z_{n_k})-\inf_{m\geq M}(y_m+z_m)|<\frac{1}{2}t   \\
+            |(y_{n_k}+z_{n_k})-\underline{\lim}(y_n+z_n)|<\frac{1}{2}t \\
+        \end{cases}
+    \end{equation*}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution-II}
+    7 -- 2\\
+    $Proof(continue)$ : \\
+    \hspace{1em} We know $|(y_{n_k}+z_{n_k})-\underline{\lim}(y_n-z_n)|<t$. This means for large enough $n_k$ (at least $n_k>M$) we make sure that
+    $(y_{n_k}+z_{n_k})\leq \underline{\lim}(y_n+z_n)+\frac{\epsilon}{2}$ and also
+    \begin{equation*}
         \underline{\lim}y_n+\underline{\lim}z_n-\frac{\epsilon}{2}\leq (y_{n_k}+z_{n_k})\leq \underline{\lim}(y_n+z_n)+\frac{\epsilon}{2}
-\end{equation*}
-\begin{equation*}
-    \Rightarrow \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim}(y_n+z_n)+\epsilon
-\end{equation*}
-\hspace{1em} Since this is true for all $\epsilon>0$, we conclude that
-\begin{equation*}
-    \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim}(y_n+z_n)
-\end{equation*}
+    \end{equation*}
+    \begin{equation*}
+        \Rightarrow \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim}(y_n+z_n)+\epsilon
+    \end{equation*}
+    \hspace{1em} Since this is true for all $\epsilon>0$, we conclude that
+    \begin{equation*}
+        \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim}(y_n+z_n)
+    \end{equation*}
 
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II}
-7 -- 2\\
-$Proof(continue)$ : \\
-\hspace{1em} Now we prove the second inequality.
-\begin{equation*}
-    \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n
-\end{equation*}
-\hspace{1em} From the fact that 
-\begin{equation*}
-    -\underline{\lim}(-x_n)=\overline{\lim}x_n
-\end{equation*}
-\hspace{1em} This equality holds because $-\inf_{m\geq n}(-x_m)=\sup_{m\geq n}x_m$. Now, 
-$\underline{\lim}(y_n+z_n)+\underline{\lim}(-y_n)\leq \underline{\lim}(y_n+z_n+(-y_n))=\underline{\lim}z_n$ 
-by what we have proved above. Thus, 
-\begin{equation*}
-    \underline{\lim}(y_n+z_n)\leq -\underline{\lim}(-y_n)+\underline{\lim}z_n=\overline{\lim}y_n+\underline{\lim}z_n
-\end{equation*}
+    7 -- 2\\
+    $Proof(continue)$ : \\
+    \hspace{1em} Now we prove the second inequality.
+    \begin{equation*}
+        \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n
+    \end{equation*}
+    \hspace{1em} From the fact that
+    \begin{equation*}
+        -\underline{\lim}(-x_n)=\overline{\lim}x_n
+    \end{equation*}
+    \hspace{1em} This equality holds because $-\inf_{m\geq n}(-x_m)=\sup_{m\geq n}x_m$. Now,
+    $\underline{\lim}(y_n+z_n)+\underline{\lim}(-y_n)\leq \underline{\lim}(y_n+z_n+(-y_n))=\underline{\lim}z_n$
+    by what we have proved above. Thus,
+    \begin{equation*}
+        \underline{\lim}(y_n+z_n)\leq -\underline{\lim}(-y_n)+\underline{\lim}z_n=\overline{\lim}y_n+\underline{\lim}z_n
+    \end{equation*}
 
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Solution-II}
-7 -- 2\\
-$Proof(continue)$ : \\
-\hspace{1em} Finally, we now prove the last inequality.
-\begin{equation*}
-    \overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
-\end{equation*}
-\hspace{1em} Since $a_n:=\sup_{m\geq n}x_m\geq \inf_{m\geq n}x_m=:b_n$, we have
-\begin{equation*}
-    \underline{\lim}z_n\leq \overline{\lim}z_n
-\end{equation*}
-\hspace{1em} Therefore, 
-\begin{equation*}
-    \overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n \quad \square
-\end{equation*}
-
+    7 -- 2\\
+    $Proof(continue)$ : \\
+    \hspace{1em} Finally, we now prove the last inequality.
+    \begin{equation*}
+        \overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
+    \end{equation*}
+    \hspace{1em} Since $a_n:=\sup_{m\geq n}x_m\geq \inf_{m\geq n}x_m=:b_n$, we have
+    \begin{equation*}
+        \underline{\lim}z_n\leq \overline{\lim}z_n
+    \end{equation*}
+    \hspace{1em} Therefore,
+    \begin{equation*}
+        \overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
+    \end{equation*}
+    \myqed
 \end{frame}
 
 
@@ -419,104 +423,106 @@ $Proof(continue)$ : \\
 
 \begin{frame}
     \frametitle{Exercise-II$^*$}
-8. Let $(a_n)$ be a sequence such that 
-\begin{equation*}
-    a_n=\frac{1}{\sqrt{n^2+1}}+\dots+\frac{1}{\sqrt{n^2+n}}
-\end{equation*}
-Calculate the limit of $(a_n)$.
+    8. Let $(a_n)$ be a sequence such that
+    \begin{equation*}
+        a_n=\frac{1}{\sqrt{n^2+1}}+\dots+\frac{1}{\sqrt{n^2+n}}
+    \end{equation*}
+    Calculate the limit of $(a_n)$.
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II$^*$}
-8.\\
-\hspace{1em} We first consider two sequence $(b_n)_{n\geq 1},(c_n)_{n\geq 1}$ given by 
-\begin{equation*}
-    \begin{cases}
-        b_n:=\frac{1}{\sqrt{n^2}}+\dots+\frac{1}{\sqrt{n^2}}\\
-        c_n:=\frac{1}{\sqrt{N^2+n}}+\dots+\frac{1}{\sqrt{N^2+n}}
-    \end{cases}
-\end{equation*}
-\hspace{1em} Clearly, 
-$\begin{cases}
-    (b_n)\leq (a_n)\\
-    (c_n)\geq (a_n)
-\end{cases}$ 
-for all $n\geq 1$. \\
-\hspace{1em} Then one can easily find out the limit for both $(b_n)$ and $(c_n)$, which can be calculated as 
-\begin{equation*}
-    \lim_{n\rightarrow\infty}b_n=\lim_{n\rightarrow \infty}\sum^n_{k=1}\frac{1}{\sqrt{n^2}}=\lim_{n\rightarrow \infty}\sum^n_{k=1}\frac{1}{n}=\lim_{n\rightarrow\infty}\frac{n}{n}=\lim_{n\rightarrow\infty}1=1
-\end{equation*}
+    8.\\
+    \hspace{1em} We first consider two sequence $(b_n)_{n\geq 1},(c_n)_{n\geq 1}$ given by
+    \begin{equation*}
+        \begin{cases}
+            b_n:=\frac{1}{\sqrt{n^2}}+\dots+\frac{1}{\sqrt{n^2}} \\
+            c_n:=\frac{1}{\sqrt{N^2+n}}+\dots+\frac{1}{\sqrt{N^2+n}}
+        \end{cases}
+    \end{equation*}
+    \hspace{1em} Clearly,
+    $\begin{cases}
+            (b_n)\leq (a_n) \\
+            (c_n)\geq (a_n)
+        \end{cases}$
+    for all $n\geq 1$. \\
+    \hspace{1em} Then one can easily find out the limit for both $(b_n)$ and $(c_n)$, which can be calculated as
+    \begin{equation*}
+        \lim_{n\rightarrow\infty}b_n=\lim_{n\rightarrow \infty}\sum^n_{k=1}\frac{1}{\sqrt{n^2}}=\lim_{n\rightarrow \infty}\sum^n_{k=1}\frac{1}{n}=\lim_{n\rightarrow\infty}\frac{n}{n}=\lim_{n\rightarrow\infty}1=1
+    \end{equation*}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II$^*$}
-8.$(continue)$\\
-\begin{equation*}
-    \lim_{n\rightarrow\infty}c_n=\lim_{n\rightarrow \infty}\sum^n_{k=1}\frac{1}{\sqrt{n^2+n}}=\lim_{n\rightarrow \infty}\frac{n}{\sqrt{n^2+n}}=\lim_{n\rightarrow\infty}\frac{1}{\sqrt{1+\frac{1}{n}}}=1
-\end{equation*}
-\hspace{1em} By Squeeze Theorem, we know 
-\begin{equation*}
-    \lim_{n\rightarrow\infty}b_n\leq \lim_{n\rightarrow\infty}a_n\leq \lim_{n\rightarrow\infty}c_n
-\end{equation*}
-, namely
-\begin{equation*}
-    1\leq \lim_{n\rightarrow\infty}a_n\leq1
-\end{equation*}
-We conclude that $ \lim_{n\rightarrow\infty}a_n=1\quad\square$
+    8.$(continue)$\\
+    \begin{equation*}
+        \lim_{n\rightarrow\infty}c_n=\lim_{n\rightarrow \infty}\sum^n_{k=1}\frac{1}{\sqrt{n^2+n}}=\lim_{n\rightarrow \infty}\frac{n}{\sqrt{n^2+n}}=\lim_{n\rightarrow\infty}\frac{1}{\sqrt{1+\frac{1}{n}}}=1
+    \end{equation*}
+    \hspace{1em} By Squeeze Theorem, we know
+    \begin{equation*}
+        \lim_{n\rightarrow\infty}b_n\leq \lim_{n\rightarrow\infty}a_n\leq \lim_{n\rightarrow\infty}c_n
+    \end{equation*}
+    , namely
+    \begin{equation*}
+        1\leq \lim_{n\rightarrow\infty}a_n\leq1
+    \end{equation*}
+    We conclude that $ \lim_{n\rightarrow\infty}a_n=1$
+    \myqed
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Exercise-II$^*$}
-9. Prove that $\lim \sqrt[n]{n}=1$.
+    9. Prove that $\lim \sqrt[n]{n}=1$.
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II$^*$}
-9.\\
-\hspace{1em} We consider the case for $n\geq 2$. Since $\sqrt[n]{n}>1$ for all $n\geq 2$, we can choose a 
-non-negative sequence, let say $(b_n)_{n\geq 2}$ such that
-\begin{equation*}
-    1+b_n=\sqrt[n]{n}
-\end{equation*}
-\hspace{1em} From the fact that 
-\begin{equation*}
-    (1+b_n)^n=\sum^n_{k=0}\left(\begin{smallmatrix}n\\k\end{smallmatrix}\right)1^k\cdot b_n^{n-k}
-\end{equation*}
-and another fact that $(1+b_n)^n=n$, we get the following inequality
-\begin{equation*}
-    n=(1+b_n)^n\leq \left(\begin{smallmatrix}n \\ 2\end{smallmatrix}\right) b^2_n=\frac{n(n-1)}{2}b^2_n
-\end{equation*}
+    9.\\
+    \hspace{1em} We consider the case for $n\geq 2$. Since $\sqrt[n]{n}>1$ for all $n\geq 2$, we can choose a
+    non-negative sequence, let say $(b_n)_{n\geq 2}$ such that
+    \begin{equation*}
+        1+b_n=\sqrt[n]{n}
+    \end{equation*}
+    \hspace{1em} From the fact that
+    \begin{equation*}
+        (1+b_n)^n=\sum^n_{k=0}\left(\begin{smallmatrix}n\\k\end{smallmatrix}\right)1^k\cdot b_n^{n-k}
+    \end{equation*}
+    and another fact that $(1+b_n)^n=n$, we get the following inequality
+    \begin{equation*}
+        n=(1+b_n)^n\leq \left(\begin{smallmatrix}n \\ 2\end{smallmatrix}\right) b^2_n=\frac{n(n-1)}{2}b^2_n
+    \end{equation*}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II$^*$}
-9.$(continue)$\\
-\hspace{1em} After some algebraic works, one can see 
-\begin{equation*}
-    b_n\leq\sqrt{\frac{2}{n-1}}
-\end{equation*}
-\hspace{1em} But this means 
-\begin{equation*}
-    0\leq \sqrt[n]{n}-1\leq \sqrt{\frac{2}{n-1}}
-\end{equation*}
-\hspace{1em} By taking the limit, we have
-\begin{equation*}
-    0\leq \lim_{n\rightarrow\infty}(\sqrt[n]{n}-1)\leq \lim_{n\rightarrow\infty}\sqrt{\frac{2}{n-1}}=0
-\end{equation*}
+    9.$(continue)$\\
+    \hspace{1em} After some algebraic works, one can see
+    \begin{equation*}
+        b_n\leq\sqrt{\frac{2}{n-1}}
+    \end{equation*}
+    \hspace{1em} But this means
+    \begin{equation*}
+        0\leq \sqrt[n]{n}-1\leq \sqrt{\frac{2}{n-1}}
+    \end{equation*}
+    \hspace{1em} By taking the limit, we have
+    \begin{equation*}
+        0\leq \lim_{n\rightarrow\infty}(\sqrt[n]{n}-1)\leq \lim_{n\rightarrow\infty}\sqrt{\frac{2}{n-1}}=0
+    \end{equation*}
 \end{frame}
 
 \begin{frame}
     \frametitle{Solution-II$^*$}
-9.$(continue)$\\
-\hspace{1em} Finally, by Squeeze theorem, we get 
-\begin{equation*}
-    \lim_{n\rightarrow\infty}(\sqrt[n]{n}-1)=\lim_{n\rightarrow\infty}\sqrt[n]{n}-1=0
-\end{equation*}
-\hspace{1em} We conclude
-\begin{equation*}
-    \lim_{n\rightarrow\infty}\sqrt[n]{n}=1\quad\square
-\end{equation*}
+    9.$(continue)$\\
+    \hspace{1em} Finally, by Squeeze theorem, we get
+    \begin{equation*}
+        \lim_{n\rightarrow\infty}(\sqrt[n]{n}-1)=\lim_{n\rightarrow\infty}\sqrt[n]{n}-1=0
+    \end{equation*}
+    \hspace{1em} We conclude
+    \begin{equation*}
+        \lim_{n\rightarrow\infty}\sqrt[n]{n}=1
+    \end{equation*}
+    \myqed
 \end{frame}
 
 
