@@ -83,80 +83,80 @@
 \section{Review}
 \begin{frame}
     \frametitle{Review}
-Let first look at the Exercise 7 from last time. \\
-\vspace{1em}
+    Let first look at the Exercise 7 from last time. \\
+    \vspace{1em}
     Let $(x_n)$ be a bounded real sequence. Then define
-\begin{equation*}
-     a_n:=\sup_{m\geq n}(x_m),\quad b_n:=\inf_{m\geq n}(x_m) 
-\end{equation*}
+    \begin{equation*}
+        a_n:=\sup_{m\geq n}(x_m),\quad b_n:=\inf_{m\geq n}(x_m)
+    \end{equation*}
 
-\begin{enumerate}
-    \item Prove that $(a_n)$ is decreasing, while $(b_n)$ is increasing.
-    \item Since both $(a_n),(b_n)$ are monotonic and bounded, they are convergent. 
-        We denote $\underline{\lim} x_n=\lim b_n$; $\overline{\lim}x_n=\lim a_n$. Show that:
-        \begin{equation*}
-            \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
-        \end{equation*}
-\end{enumerate}
+    \begin{enumerate}
+        \item Prove that $(a_n)$ is decreasing, while $(b_n)$ is increasing.
+        \item Since both $(a_n),(b_n)$ are monotonic and bounded, they are convergent.
+              We denote $\underline{\lim} x_n=\lim b_n$; $\overline{\lim}x_n=\lim a_n$. Show that:
+              \begin{equation*}
+                  \underline{\lim}y_n+\underline{\lim}z_n\leq \underline{\lim} (y_n+z_n)\leq\overline{\lim}y_n+\underline{\lim}z_n\leq\overline{\lim}y_n+\overline{\lim}z_n
+              \end{equation*}
+    \end{enumerate}
 
 \end{frame}
 
 \section{Stop}
 \begin{frame}
     \frametitle{This is a title!}
-\vspace{6em}
-\begin{center}
-     \Large{Any Questions?}
-\end{center}
-   
+    \vspace{6em}
+    \begin{center}
+        \Large{Any Questions?}
+    \end{center}
+
 \end{frame}
 
 \section{Metric Space}
 \begin{frame}
     \frametitle{Metric Space}
-\begin{itemize}
-    \item What is the definition of a metric?
-    \item Why we want to introduce the idea of Metric Space?
-    \item What new results can we explore from this new idea?
-\end{itemize}
+    \begin{itemize}
+        \item What is the definition of a metric?
+        \item Why we want to introduce the idea of Metric Space?
+        \item What new results can we explore from this new idea?
+    \end{itemize}
 \end{frame}
 
 \section{Metric Space}
 \begin{frame}
     \frametitle{Metric Space}
-We want to generalize the idea of \emph{convergence}, we want to define the most essential thing of convergence by ourselves, 
-namely the \textbf{Length Function}.\\
+    We want to generalize the idea of \emph{convergence}, we want to define the most essential thing of convergence by ourselves,
+    namely the \textbf{Length Function}.\\
 
-\vspace{1em}
+    \vspace{1em}
 
-What properties a usual length function should have?
-\begin{enumerate}
-    \item Always positive.
-    \item Symmetric.
-    \item Followed \emph{Triangle Inequality}.
-\end{enumerate}
+    What properties a usual length function should have?
+    \begin{enumerate}
+        \item Always positive.
+        \item Symmetric.
+        \item Followed \emph{Triangle Inequality}.
+    \end{enumerate}
 
-\vspace{1em}
+    \vspace{1em}
 
-Transform these into mathematical language\dots
+    Transform these into mathematical language\dots
 \end{frame}
 
 \section{Metric Space}
 \begin{frame}
     \frametitle{Metric Space}
-A two variables functions 
+    A two variables functions
 
-\begin{equation*}
-    \rho(\cdot,\cdot):M\times M \rightarrow \mathbb{R}
-\end{equation*}
+    \begin{equation*}
+        \rho(\cdot,\cdot):M\times M \rightarrow \mathbb{R}
+    \end{equation*}
 
-is called a metric if it satisfies:
+    is called a metric if it satisfies:
 
-\begin{enumerate}
-    \item $\forall x,y\in M,\ \rho (x,y) \geq 0$ and $\rho (x,y)=0$ if and only if $x=y$.
-    \item  $\forall x,y\in M,\ \rho (x,y)=\rho (y,x)$.
-    \item  $\forall x,y,z\in M,\ \rho (x,z)\leq \rho (x,y)+\rho (y,z)$.
-\end{enumerate}
+    \begin{enumerate}
+        \item $\forall x,y\in M,\ \rho (x,y) \geq 0$ and $\rho (x,y)=0$ if and only if $x=y$.
+        \item  $\forall x,y\in M,\ \rho (x,y)=\rho (y,x)$.
+        \item  $\forall x,y,z\in M,\ \rho (x,z)\leq \rho (x,y)+\rho (y,z)$.
+    \end{enumerate}
 
 
 \end{frame}
@@ -164,181 +164,181 @@ is called a metric if it satisfies:
 \section{Metric Space}
 \begin{frame}
     \frametitle{Examples}
-\begin{itemize}
-    \item $M=\mathbb{R}^n$, the usual metric is given by 
-        \begin{equation*}
-            \rho ( (x_1,x_2,\dots,x_n), (y_1,y_2,\dots,y_n)) = \sqrt{\sum^{n}_{i=k}(x_i-y_i)^2 }
-        \end{equation*} 
-        and this is so-called \emph{Euclidean distance}.
-    \item $M=\mathbb{N}, \rho(x,y)= \#\{ a:a\in [min\{x,y\},max\{x,y\}]\ \} $
-    \item $M=\mathbb{R},\rho (x,y)=1 $ if $x\neq y$; $\rho (x,y)=0$ if $x=y$
-\end{itemize}
-\vspace{1em}
-A simple question arise, is any metric \textbf{well-defined}?
+    \begin{itemize}
+        \item $M=\mathbb{R}^n$, the usual metric is given by
+              \begin{equation*}
+                  \rho ( (x_1,x_2,\dots,x_n), (y_1,y_2,\dots,y_n)) = \sqrt{\sum^{n}_{i=k}(x_i-y_i)^2 }
+              \end{equation*}
+              and this is so-called \emph{Euclidean distance}.
+        \item $M=\mathbb{N}, \rho(x,y)= \#\{ a:a\in [min\{x,y\},max\{x,y\}]\ \} $
+        \item $M=\mathbb{R},\rho (x,y)=1 $ if $x\neq y$; $\rho (x,y)=0$ if $x=y$
+    \end{itemize}
+    \vspace{1em}
+    A simple question arise, is any metric \textbf{well-defined}?
 \end{frame}
 
 \section{Generalization of Convergence}
 \begin{frame}
     \frametitle{Generalization of Convergence}
-Then, by replacing the usual matric $\rho(x,y)=|x-y|$ and choosing our universal set $M$, we get the natural definition for
-generalize convergence in metric space $(M,\rho)$ for a sequence $(a_n):\mathbb{N}\rightarrow M$, which is given by:
-\begin{equation*}
-    \lim_{n\rightarrow \infty}a_n=a\quad :\Leftrightarrow \quad \underset{\epsilon>0}{\forall}\ \underset{N\in \mathbb{N}}{\exists}\ \underset{n>\mathbb{N}}{\forall} a_n\in B_\epsilon(a)
-\end{equation*}
-where
-\begin{equation*}
-    B_\epsilon(a)=\{ x\in M:\rho(x,a)<\epsilon\},\quad \epsilon>0,\quad a\in M.
-\end{equation*}
+    Then, by replacing the usual matric $\rho(x,y)=|x-y|$ and choosing our universal set $M$, we get the natural definition for
+    generalize convergence in metric space $(M,\rho)$ for a sequence $(a_n):\mathbb{N}\rightarrow M$, which is given by:
+    \begin{equation*}
+        \lim_{n\rightarrow \infty}a_n=a\quad :\Leftrightarrow \quad \underset{\epsilon>0}{\forall}\ \underset{N\in \mathbb{N}}{\exists}\ \underset{n>\mathbb{N}}{\forall} a_n\in B_\epsilon(a)
+    \end{equation*}
+    where
+    \begin{equation*}
+        B_\epsilon(a)=\{ x\in M:\rho(x,a)<\epsilon\},\quad \epsilon>0,\quad a\in M.
+    \end{equation*}
 
 \end{frame}
 
 \section{Cauchy Sequence}
 \begin{frame}
     \frametitle{Cauchy Sequence}
-\begin{itemize}
-    \item What is the definition of Cauchy Sequence?
-    \item How to understand Cauchy Sequence?
-    \item Why we want to introduce the idea of Cauchy Sequence?
-    \item What new results can we explore from this new idea?
-\end{itemize}
+    \begin{itemize}
+        \item What is the definition of Cauchy Sequence?
+        \item How to understand Cauchy Sequence?
+        \item Why we want to introduce the idea of Cauchy Sequence?
+        \item What new results can we explore from this new idea?
+    \end{itemize}
 
 \end{frame}
 
 \section{Cauchy Sequence}
 \begin{frame}
     \frametitle{Cauchy Sequence}
-The fundamental reason why we want to introduce Cauchy Sequence is because we want to \emph{further generalize} the idea of 
-convergence.\\
-\vspace{0.5em}
-Now, we are not only free to choose the metric we like, additionally, we remove the constraint which requires a sequence 
-to converge to a \emph{specific point}.
+    The fundamental reason why we want to introduce Cauchy Sequence is because we want to \emph{further generalize} the idea of
+    convergence.\\
+    \vspace{0.5em}
+    Now, we are not only free to choose the metric we like, additionally, we remove the constraint which requires a sequence
+    to converge to a \emph{specific point}.
 
 \end{frame}
 
 \section{Cauchy Sequence}
 \begin{frame}
     \frametitle{Cauchy Sequence}
-We list some important results and theorems for Cauchy Sequence.
-\begin{itemize}
-    \item Every convergent sequence is a Cauchy sequence.
-    \item Every Cauchy sequence in a metric space $(M,\rho)$ is bounded.
-    \item Every Cauchy sequence in $\mathbb{R}$ with the usual metric is convergent.
-\end{itemize}
+    We list some important results and theorems for Cauchy Sequence.
+    \begin{itemize}
+        \item Every convergent sequence is a Cauchy sequence.
+        \item Every Cauchy sequence in a metric space $(M,\rho)$ is bounded.
+        \item Every Cauchy sequence in $\mathbb{R}$ with the usual metric is convergent.
+    \end{itemize}
 \end{frame}
 
 \section{Completeness}
 \begin{frame}
     \frametitle{Digest\dots}
-We now take a deep breath, and look back what we have introduced. Where does all these new definitions lead us to?\\
+    We now take a deep breath, and look back what we have introduced. Where does all these new definitions lead us to?\\
 
 \end{frame}
 
 \section{Completeness}
 \begin{frame}
     \frametitle{Completeness}
-The problem is, a Cauchy Sequence can simply not "\emph{converge}" to anywhere anymore if we generalize the idea of convergence.\\
-\vspace{0.5em}
-Then, after generalizing the idea of convergence, if \textbf{every} Cauchy sequence still converge, we say this metric space is 
-\emph{complete}.\\
-\vspace{0.5em}
-We now take a look at some examples for a Cauchy sequence failed to converge.
+    The problem is, a Cauchy Sequence can simply not "\emph{converge}" to anywhere anymore if we generalize the idea of convergence.\\
+    \vspace{0.5em}
+    Then, after generalizing the idea of convergence, if \textbf{every} Cauchy sequence still converge, we say this metric space is
+    \emph{complete}.\\
+    \vspace{0.5em}
+    We now take a look at some examples for a Cauchy sequence failed to converge.
 
 \end{frame}
 
 \section{Completeness}
 \begin{frame}
     \frametitle{Completeness}
-For a metric space $(\mathbb{Q},\rho)$, where $\rho(x,y)$ is analogous to our usual metric. Then, a sequence
-\begin{equation*}
-    (a_n)_{n\in\mathbb{N}}:=1,1.4,1.41,1.414,\dots
-\end{equation*}
-is a Cauchy sequence but failed to converge in $\mathbb{Q}$ if we choose the following terms appropriately and let it \emph{converge 
-to $\sqrt{2}$ in $\mathbb{R}$} eventually.\\
-\vspace{0,5em}
+    For a metric space $(\mathbb{Q},\rho)$, where $\rho(x,y)$ is analogous to our usual metric. Then, a sequence
+    \begin{equation*}
+        (a_n)_{n\in\mathbb{N}}:=1,1.4,1.41,1.414,\dots
+    \end{equation*}
+    is a Cauchy sequence but failed to converge in $\mathbb{Q}$ if we choose the following terms appropriately and let it \emph{converge
+        to $\sqrt{2}$ in $\mathbb{R}$} eventually.\\
+    \vspace{0,5em}
 
-From here, it seems we somehow find a good way to \emph{construct} Real Numbers.
+    From here, it seems we somehow find a good way to \emph{construct} Real Numbers.
 \end{frame}
 
 \section{Construct Real Numbers}
 \begin{frame}
     \frametitle{Construct Real Numbers}
-The main idea to \textbf{complete} $\mathbb{Q}$ is to consider the following\\
-\begin{center}
-    Every Cauchy sequence can \emph{represent} a number in $\mathbb{R}$.
-\end{center}
+    The main idea to \textbf{complete} $\mathbb{Q}$ is to consider the following\\
+    \begin{center}
+        Every Cauchy sequence can \emph{represent} a number in $\mathbb{R}$.
+    \end{center}
 
-For example, from the last slide, we can view the sequence 
-\begin{equation*}
-    (a_n)_{n\in\mathbb{N}}=1,1.4,1.41,1.414,\dots
-\end{equation*}
-as $\sqrt{2}$ by defining a \emph{(equivalence) class} for each number in $\mathbb{R}$, and in this case, we define the sequence $(a_n)$ as $\sqrt{2}$.\\
-\vspace{0.5em}
-Then, from now on, the number defined through the Cauchy sequence which is given by
-\begin{equation*}
-    0.9,0.99,0.999,0.9999,0.99999
-\end{equation*}
-is equal to $1$, namely $0.999999_{\dots}=1$.
+    For example, from the last slide, we can view the sequence
+    \begin{equation*}
+        (a_n)_{n\in\mathbb{N}}=1,1.4,1.41,1.414,\dots
+    \end{equation*}
+    as $\sqrt{2}$ by defining a \emph{(equivalence) class} for each number in $\mathbb{R}$, and in this case, we define the sequence $(a_n)$ as $\sqrt{2}$.\\
+    \vspace{0.5em}
+    Then, from now on, the number defined through the Cauchy sequence which is given by
+    \begin{equation*}
+        0.9,0.99,0.999,0.9999,0.99999
+    \end{equation*}
+    is equal to $1$, namely $0.999999_{\dots}=1$.
 \end{frame}
 
 \section{Real Functions}
 \begin{frame}
     \frametitle{Real Functions}
-We already know how to describe a function, so we list some \emph{elementary functions} and some categories of functions 
-which you will encounter a lot in the future.
-\begin{itemize}
-    \item Polynomial Function : $f(x)=\sum^n_{k=0}c_kx^k,\ n\in \mathbb{N}.\ \underset{1\leq i\leq n}{\forall}c_i\in \mathbb{R}$
-    \item Power Function : $f(x)=x^n,\ n\in \mathbb{N}$
-    \item Rational Function : $f(x)=\frac{p(x)}{q(x)},\ p,q\in \mathbb{P}(\mathbb{R})$
-    \item Periodic Function : $\underset{x\in \mathbb{R}}{\forall}\ f(x+T)=f(x)$, where $T$ is \emph{period}.
-    \item Piecewise Function
-\end{itemize}
-(What is the domain of each kind of function?)
+    We already know how to describe a function, so we list some \emph{elementary functions} and some categories of functions
+    which you will encounter a lot in the future.
+    \begin{itemize}
+        \item Polynomial Function : $f(x)=\sum^n_{k=0}c_kx^k,\ n\in \mathbb{N}.\ \underset{1\leq i\leq n}{\forall}c_i\in \mathbb{R}$
+        \item Power Function : $f(x)=x^n,\ n\in \mathbb{N}$
+        \item Rational Function : $f(x)=\frac{p(x)}{q(x)},\ p,q\in \mathbb{P}(\mathbb{R})$
+        \item Periodic Function : $\underset{x\in \mathbb{R}}{\forall}\ f(x+T)=f(x)$, where $T$ is \emph{period}.
+        \item Piecewise Function
+    \end{itemize}
+    (What is the domain of each kind of function?)
 \end{frame}
 
 \section{Real Functions}
 \begin{frame}
     \frametitle{Real Functions}
-Then, we can do some basic manipulation to a function, including:
-\begin{enumerate}
-    \item Translation in different directions
-    \item Multiplying a function's argument
-    \item Multiplying a function's values
-\end{enumerate}
+    Then, we can do some basic manipulation to a function, including:
+    \begin{enumerate}
+        \item Translation in different directions
+        \item Multiplying a function's argument
+        \item Multiplying a function's values
+    \end{enumerate}
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-1. Suppose the function which is given by
-\begin{equation*}
-    f:[2,+\infty)\rightarrow \mathbb{R}
-\end{equation*}
-and satisfies 
-\begin{equation*}
-    x^2f(x)-f(1-x)=x
-\end{equation*}
-Please calculate the value of 
-\begin{equation*}
-    \lim_{x\rightarrow \infty}\frac{f(x)}{3}
-\end{equation*}
-(Can we further expand the domain of f?)
+    1. Suppose the function which is given by
+    \begin{equation*}
+        f:[2,+\infty)\rightarrow \mathbb{R}
+    \end{equation*}
+    and satisfies
+    \begin{equation*}
+        x^2f(x)-f(1-x)=x
+    \end{equation*}
+    Please calculate the value of
+    \begin{equation*}
+        \lim_{x\rightarrow \infty}\frac{f(x)}{3}
+    \end{equation*}
+    (Can we further expand the domain of f?)
 \end{frame}
 
 \section{Exercise}
 \begin{frame}
     \frametitle{Exercise}
-2. Please construct a metric that makes $\mathbb{R}$ incomplete with regard to this metric. You can use the method given in 
-Horst's slides.
+    2. Please construct a metric that makes $\mathbb{R}$ incomplete with regard to this metric. You can use the method given in
+    Horst's slides.
 \end{frame}
 
 \section{More about Cauchy Sequence}
 \begin{frame}
     \frametitle{More About Cauchy Sequence}
-Let us take a look at some tricky examples of Cauchy sequence.\\
-\vspace{5em}
-\begin{center}
-    \Large \emph{In class demonstration!}
-\end{center}
+    Let us take a look at some tricky examples of Cauchy sequence.\\
+    \vspace{5em}
+    \begin{center}
+        \Large \emph{In class demonstration!}
+    \end{center}
 \end{frame}
 
 \begin{frame}
