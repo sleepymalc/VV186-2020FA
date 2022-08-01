@@ -1,7 +1,7 @@
 # VV186 2020FA TA
 
 <p align="center"><b><i>
-	Recitation Class of VV186 Lectures Slides📚.
+	Lectures Slides of VV186 (Multi-variables Calculus II) Recitation Class 📚.
 </i></b></p>
 
 ## About Honor Code
